@@ -19,7 +19,13 @@ public enum PathPostfix {
     USER("/user"),
     AUTHINFO("/authinfo"),
     VN("/vn"),
-    RELEASE("/release");
+    RELEASE("/release"),
+    PRODUCER("/producer"),
+    CHARACTER("/character"),
+    STAFF("/staff"),
+    TAG("/tag"),
+    TRAIT("/trait");
+
 
     private String postfix;
 

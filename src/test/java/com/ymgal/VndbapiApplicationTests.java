@@ -20,7 +20,7 @@ class VndbapiApplicationTests {
     @Test
     void contextLoads() {
         //iNovelService.getNovelInfo();
-        val vndbFilter = new VndbFilter(FilterName.ID.getFilterName(), FilterOperator.EQ.getOperator(), "v17");
+        val vndbFilter = new VndbFilter(FilterName.ID.getFilterName(), FilterOperator.EQ.getOperator(), "17");
         iNovelService.getInfoApi(PathPostfix.VN, vndbFilter, Field.vn);
     }
 }
