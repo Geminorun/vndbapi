@@ -1,37 +1,5 @@
 package com.ymgal.api.model;
 
-/**
- * @Auther: lyl
- * @Date: 2023/10/13 11:23
- * @Description:
- */
-//public class FilterField {
-//    public String id;
-//    public String search;
-//    public String lang;
-//    public String olang;
-//    public String type;
-//    public String platform;
-//    public String length;
-//    public String released;
-//    public String rating;
-//    public String votecount;
-//    public String has_description;
-//    public String has_anime;
-//    public String has_screenshot;
-//    public String has_review;
-//    public String devstatus;
-//    public String tag;
-//    public String dtag;
-//    public String anime_id;
-//    public String label;
-//    public String release;
-//    public String character;
-//    public String staff;
-//    public String developer;
-//}
-//
-
 public enum FilterName {
     ID("id"),
     SEARCH("search"),
@@ -56,7 +24,7 @@ public enum FilterName {
     CHARACTER("character"),
     STAFF("staff"),
     DEVELOPER("developer");
-    private String filterName;
+    private final String filterName;
 
     FilterName(String field) {
         this.filterName = field;

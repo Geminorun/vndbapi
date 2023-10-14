@@ -3,7 +3,6 @@ package com.ymgal.helper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.util.List;
@@ -14,7 +13,6 @@ import java.util.Map;
  * @Date: 2023/10/13 10:28
  * @Description:
  */
-@Slf4j
 public class JsonHelper {
     public static final ObjectMapper mapper = new ObjectMapper();
 
@@ -36,7 +34,7 @@ public class JsonHelper {
         try {
             return mapper.writeValueAsString(obj);
         } catch (JsonProcessingException e) {
-            log.error("json序列化出错：" + obj, e);
+            e.printStackTrace();
             return null;
         }
     }
@@ -54,7 +52,7 @@ public class JsonHelper {
         try {
             return mapper.readValue(json, tClass);
         } catch (IOException e) {
-            log.error("json解析出错：" + json, e);
+            e.printStackTrace();
             return null;
         }
     }
@@ -72,7 +70,7 @@ public class JsonHelper {
         try {
             return mapper.readValue(json, mapper.getTypeFactory().constructCollectionType(List.class, eClass));
         } catch (IOException e) {
-            log.error("json解析出错：" + json, e);
+            e.printStackTrace();
             return null;
         }
     }
@@ -91,7 +89,7 @@ public class JsonHelper {
         try {
             return mapper.readValue(json, mapper.getTypeFactory().constructMapType(Map.class, kClass, vClass));
         } catch (IOException e) {
-            log.error("json解析出错：" + json, e);
+            e.printStackTrace();
             return null;
         }
     }
@@ -109,7 +107,7 @@ public class JsonHelper {
         try {
             return mapper.readValue(json, type);
         } catch (IOException e) {
-            log.error("json解析出错：" + json, e);
+            e.printStackTrace();
             return null;
         }
     }

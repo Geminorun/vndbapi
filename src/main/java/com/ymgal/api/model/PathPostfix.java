@@ -6,14 +6,6 @@ package com.ymgal.api.model;
  * @Description:
  */
 
-//public class Postfix {
-//    public static String stats;
-//    public static String user;
-//    public static String authinfo;
-//    public static String vn;
-//    public static String release;
-//}
-
 public enum PathPostfix {
     STATS("/stats"),
     USER("/user"),
@@ -27,7 +19,7 @@ public enum PathPostfix {
     TRAIT("/trait");
 
 
-    private String postfix;
+    private final String postfix;
 
     PathPostfix(String postfix) {
         this.postfix = postfix;

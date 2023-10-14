@@ -13,7 +13,7 @@ public enum FilterOperator {
     LT("<"),
     LTE("<=");
 
-    private String operator;
+    private final String operator;
 
     FilterOperator(String operator) {
         this.operator = operator;
@@ -34,20 +34,3 @@ public enum FilterOperator {
 
 
 }
-
-//
-//public class Operator {
-//    @Value("=")
-//    public static String eq;
-//    @Value("!=")
-//    public static String ne;
-//    @Value(">")
-//    public static String qt;
-//    @Value(">=")
-//    public static String gte;
-//    @Value("<")
-//    public static String lt;
-//    @Value("<=")
-//    public static String lte;
-//}
-

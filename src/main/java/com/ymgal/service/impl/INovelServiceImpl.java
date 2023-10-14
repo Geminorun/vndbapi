@@ -9,19 +9,17 @@ import com.ymgal.helper.HttpClientHelper;
 import com.ymgal.helper.JsonHelper;
 import com.ymgal.model.RequestBody;
 import com.ymgal.service.INovelService;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
 
 /**
  * @Auther: lyl
  * @Date: 2023/10/13 09:13
  * @Description:
  */
-@Service
+
 public class INovelServiceImpl implements INovelService {
 
-    @Value("${vndb.url}")
-    private String baseurl;
+
+    private final static String baseurl = "https://api.vndb.org/kana";
 
     @Override
     public Object getNovelInfo() {
@@ -56,7 +54,7 @@ public class INovelServiceImpl implements INovelService {
         Object obj = HttpClientHelper.sendPost(url, JsonHelper.serialize(body));
         System.out.println(obj);
         return obj;
-        
+
     }
 
 }
