@@ -13,10 +13,11 @@ import java.util.List;
  * @Description:
  */
 public class Character extends VoBase {
-    
+
     public String name;
     public String original;
     public List<String> aliases;
+    
     public String description;
     public String blood_type;
     public String height;
@@ -29,7 +30,7 @@ public class Character extends VoBase {
     public String birthday;
     public List<String> sex;
     public Image image;
-    public Vns vns;
+    public List<Vns> vns;
     public List<Trait> traits;
 
 }

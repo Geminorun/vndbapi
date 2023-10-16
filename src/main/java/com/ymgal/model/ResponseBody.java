@@ -1,12 +1,13 @@
 package com.ymgal.model;
 
-import com.ymgal.model.vo.common.VoBase;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
-public class ResponseBody<T extends VoBase> {
+public class ResponseBody<T> {
 
     public Boolean more;
 
-    public T results;
+    public List<T> results;
 }

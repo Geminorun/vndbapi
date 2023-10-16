@@ -3,6 +3,7 @@ package com.ymgal.service;
 
 import com.ymgal.helper.HttpClientHelper;
 import com.ymgal.helper.JsonHelper;
+import com.ymgal.helper.PathPostfixHelper;
 import com.ymgal.model.PathPostfix;
 import com.ymgal.model.RequestBody;
 import com.ymgal.model.VndbFilter;
@@ -30,9 +31,10 @@ public class ApiService {
     public <T> T getInfoApi(PathPostfix postfix, VndbFilter filter) {
 
         //根据postfix获取tClass
-        Class<?> tClass = postfix.getVoClass();
+        Class<?> tClass = PathPostfixHelper.getVoClass(postfix);
+        //Class<?> tClass = Vn.class;
         //根据postfix获取fields
-        String fields = postfix.getFields();
+        String fields = PathPostfixHelper.getFields(postfix);
 
         //url赋值
         String url = baseurl + postfix.getPostfix();
@@ -46,9 +48,10 @@ public class ApiService {
         System.out.println("Url " + url);
         System.out.println("Filter " + filter.toFormatString());
         System.out.println("Field " + fields);
+        System.out.println("CLass " + tClass.getSimpleName());
 
         String jsonstr = HttpClientHelper.sendPost(url, JsonHelper.serialize(body));
-        return (T) JsonHelper.parse(jsonstr, tClass);
+        return JsonHelper.parse(jsonstr, (Class<T>) tClass);
     }
 
     public Object getNovelInfo() {
