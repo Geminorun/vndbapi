@@ -4,10 +4,9 @@ import com.ymgal.helper.JsonHelper;
 import com.ymgal.model.PathPostfix;
 import com.ymgal.model.ResponseBody;
 import com.ymgal.model.VndbFilter;
-import com.ymgal.model.enums.Field;
 import com.ymgal.model.enums.FilterName;
 import com.ymgal.model.enums.FilterOperator;
-import com.ymgal.model.vo.Vn;
+import com.ymgal.model.vo.Character;
 import com.ymgal.service.ApiService;
 import org.junit.jupiter.api.Test;
 
@@ -23,9 +22,8 @@ class VndbapiApplicationTests {
     @Test
     void contextLoads() {
         VndbFilter vndbFilter = new VndbFilter(FilterName.ID.getFilterName(), FilterOperator.EQ.getOperator(), "17");
-        ResponseBody<Vn> vnResponseBody = new ResponseBody<>();
-        vnResponseBody = apiService.getInfoApi(PathPostfix.VN, vndbFilter, Field.vn, vnResponseBody.getClass());
-        System.out.println(JsonHelper.serialize(vnResponseBody));
+        ResponseBody<Character> responseBody = apiService.getInfoApi(PathPostfix.CHARACTER, vndbFilter);
+        System.out.println(JsonHelper.serialize(responseBody));
     }
 
 

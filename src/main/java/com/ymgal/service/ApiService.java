@@ -25,13 +25,14 @@ public class ApiService {
      *
      * @param postfix 枚举  URL后缀。如：https://api.vndb.org/kana/vn 中的/vn
      * @param filter  过滤器  如：id = 17
-     * @param field   返回字段
      * @return 泛型的java对象
      */
-    public <T> T getInfoApi(PathPostfix postfix, VndbFilter filter, String field, Class<T> tClass) {
+    public <T> T getInfoApi(PathPostfix postfix, VndbFilter filter) {
 
         //根据postfix获取tClass
-//        Class tClass = postfix.getVoClass();
+        Class<?> tClass = postfix.getVoClass();
+        //根据postfix获取fields
+        String fields = postfix.getFields();
 
         //url赋值
         String url = baseurl + postfix.getPostfix();
@@ -39,15 +40,15 @@ public class ApiService {
         //body
         RequestBody body = new RequestBody();
         body.setFilters(filter.toFormatString());
-        body.setFields(field);
+        body.setFields(fields);
 
         //print
         System.out.println("Url " + url);
         System.out.println("Filter " + filter.toFormatString());
-        System.out.println("Field " + field);
+        System.out.println("Field " + fields);
 
         String jsonstr = HttpClientHelper.sendPost(url, JsonHelper.serialize(body));
-        return JsonHelper.parse(jsonstr, tClass);
+        return (T) JsonHelper.parse(jsonstr, tClass);
     }
 
     public Object getNovelInfo() {

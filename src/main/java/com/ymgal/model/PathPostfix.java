@@ -1,7 +1,12 @@
 package com.ymgal.model;
 
 import com.ymgal.dto.Archives;
+import com.ymgal.model.enums.Field;
+import com.ymgal.model.vo.Character;
+import com.ymgal.model.vo.Producer;
+import com.ymgal.model.vo.Release;
 import com.ymgal.model.vo.Vn;
+import com.ymgal.model.vo.common.VoBase;
 
 /**
  * @Auther: lyl
@@ -10,16 +15,7 @@ import com.ymgal.model.vo.Vn;
  */
 
 public enum PathPostfix {
-    STATS("/stats"),
-    USER("/user"),
-    AUTHINFO("/authinfo"),
-    VN("/vn"),
-    RELEASE("/release"),
-    PRODUCER("/producer"),
-    CHARACTER("/character"),
-    STAFF("/staff"),
-    TAG("/tag"),
-    TRAIT("/trait");
+    STATS("/stats"), USER("/user"), AUTHINFO("/authinfo"), VN("/vn"), RELEASE("/release"), PRODUCER("/producer"), CHARACTER("/character"), STAFF("/staff"), TAG("/tag"), TRAIT("/trait");
 
 
     private final String postfix;
@@ -38,11 +34,53 @@ public enum PathPostfix {
     }
 
     public Class getVoClass() {
-        Class cls = null;
-        if ("/vn".equals(this.postfix)) {
-            cls = Vn.class;
+
+//        Result<String> result = new Result<>(String.class);
+//        Class<?> resultClass = result.getType();
+
+        Class<?> cls = null;
+
+        switch (this.postfix) {
+            case "/vn":
+                cls = (new ResponseBody<Vn>()).getClass();
+                break;
+            case "/release":
+                cls = (new ResponseBody<Release>()).getClass();
+                break;
+            case "/character":
+                cls = (new ResponseBody<Character>()).getClass();
+                break;
+            case "/producer":
+                cls = (new ResponseBody<Producer>()).getClass();
+                break;
+            default:
+                cls = (new ResponseBody<VoBase>()).getClass();
+                break;
         }
         return cls;
+    }
+
+    public String getFields() {
+        String fields = "";
+
+        switch (this.postfix) {
+            case "/vn":
+                fields = Field.vn;
+                break;
+            case "/release":
+                fields = Field.release;
+                break;
+            case "/character":
+                fields = Field.character;
+                break;
+            case "/producer":
+                fields = Field.producer;
+                break;
+            default:
+                fields = "id";
+                break;
+        }
+        return fields;
     }
 
     public Class getDtoClass() {

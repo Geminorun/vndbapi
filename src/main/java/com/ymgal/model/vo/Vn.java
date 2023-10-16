@@ -3,13 +3,13 @@ package com.ymgal.model.vo;
 import com.ymgal.model.vo.common.Image;
 import com.ymgal.model.vo.common.Tag;
 import com.ymgal.model.vo.common.Title;
+import com.ymgal.model.vo.common.VoBase;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-public class Vn {
-    public String id;
+public class Vn extends VoBase {
     public String title;
     public String alttitle;
     public List<String> aliases;
