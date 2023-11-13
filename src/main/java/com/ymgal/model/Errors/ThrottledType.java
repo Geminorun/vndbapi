@@ -1,4 +1,4 @@
-﻿package com.ymgal.model.Errors;
+package com.ymgal.model.Errors;
 
 /// <summary>
 ///		Represents the type of Throttling that occured

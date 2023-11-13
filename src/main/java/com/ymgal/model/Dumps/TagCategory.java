@@ -1,4 +1,4 @@
-﻿package com.ymgal.model.Dumps;
+package com.ymgal.model.Dumps;
 
 /// <summary>
 ///		Indicates what type the tag is

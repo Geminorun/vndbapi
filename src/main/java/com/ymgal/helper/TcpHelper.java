@@ -3,6 +3,8 @@ package com.ymgal.helper;
 import java.io.*;
 import java.net.Socket;
 
+import static com.ymgal.Constants.*;
+
 /**
  * @Auther: lyl
  * @Date: 2023/10/23 20:21
@@ -16,12 +18,10 @@ public class TcpHelper {
 
     public static void Login() {
         try {
-            socket = new Socket("api.vndb.org", 19534);
+            socket = new Socket(ApiDomain, ApiPort);
             //socket = new Socket("localhost", 8168);
             System.out.println("客户端建立成功！");
-
-            char end = 0x04;
-            String printText = "login {\"protocol\":1,\"client\":\"AwesomeClient\",\"clientver\":\"1.0\"}" + end + "\n";
+            String printText = "login {\"protocol\":1,\"client\":\"AwesomeClient\",\"clientver\":\"1.0\"}" + EotChar + "\n";
             outputStream = socket.getOutputStream();        //建立客户端信息输出流
 
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(outputStream));
@@ -34,7 +34,7 @@ public class TcpHelper {
             int len;
             while ((len = inputStream.read(buffer, 0, buffer.length)) > 0) {
                 builder.append(new String(buffer, 0, len));
-                if (buffer[--len] == end)
+                if (buffer[--len] == EotChar)
                     break;
             }
 

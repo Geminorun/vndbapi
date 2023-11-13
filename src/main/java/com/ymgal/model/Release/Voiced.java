@@ -1,4 +1,4 @@
-﻿package com.ymgal.model.Release;
+package com.ymgal.model.Release;
 
 /// <summary>
 /// Voiced Status

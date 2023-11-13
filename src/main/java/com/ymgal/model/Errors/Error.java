@@ -1,4 +1,4 @@
-﻿package com.ymgal.model.Errors;
+package com.ymgal.model.Errors;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ymgal.Interfaces.IVndbError;

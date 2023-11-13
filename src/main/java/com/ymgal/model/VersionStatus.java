@@ -1,4 +1,4 @@
-﻿package com.ymgal.model;
+package com.ymgal.model;
 
 /// <summary>
 /// Enum defining completion status levels

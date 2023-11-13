@@ -1,4 +1,4 @@
-﻿package com.ymgal.model.Common;
+package com.ymgal.model.Common;
 
 /// <summary>
 /// Priority levels, usually used for Wishlist

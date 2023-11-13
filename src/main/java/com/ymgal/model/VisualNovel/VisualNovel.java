@@ -1,4 +1,4 @@
-﻿package com.ymgal.model.VisualNovel;
+package com.ymgal.model.VisualNovel;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ymgal.model.Common.ImageRating;

@@ -5,10 +5,10 @@ import lombok.SneakyThrows;
 
 /**
  * @Auther: lyl
- * @Date: 2023/11/13 14:57
+ * @Date: 2023/11/13 15:16
  * @Description:
  */
-public class FilterAnd implements IFilter {
+public class FilterOr implements IFilter {
 
     /// <summary>
     ///		The Filter on the Left, or First Condition
@@ -42,6 +42,6 @@ public class FilterAnd implements IFilter {
     public String toString() {
         if (!this.IsFilterValid())
             throw new Exception("One of the provided filters are not valid.");
-        return "(" + this.LeftFilter + " and " + this.RightFilter + ")";
+        return "(" + this.LeftFilter + " or " + this.RightFilter + ")";
     }
 }

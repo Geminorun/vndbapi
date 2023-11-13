@@ -1,6 +1,7 @@
-﻿package com.ymgal.model;
+package com.ymgal.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.ymgal.Constants;
 
 public class Login {
     @JsonProperty("protocol")
@@ -11,7 +12,7 @@ public class Login {
     public String ClientVersion;
 
     public Login() {
-        this.ClientName = VndbUtils.ClientName;
-        this.ClientVersion = VndbUtils.ClientVersion;
+        this.ClientName = Constants.ClientName;
+        this.ClientVersion = Constants.ClientVersion;
     }
 }

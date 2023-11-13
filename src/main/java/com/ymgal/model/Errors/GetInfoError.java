@@ -1,4 +1,4 @@
-﻿package com.ymgal.model.Errors;
+package com.ymgal.model.Errors;
 
 /// <summary>
 ///		Unknown info flag in a "get" command

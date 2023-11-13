@@ -1,4 +1,4 @@
-﻿package com.ymgal.model.Dumps;
+package com.ymgal.model.Dumps;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

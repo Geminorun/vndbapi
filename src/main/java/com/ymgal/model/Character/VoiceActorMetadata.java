@@ -1,4 +1,4 @@
-﻿package com.ymgal.model.Character;
+package com.ymgal.model.Character;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,4 +1,4 @@
-﻿package com.ymgal.model;
+package com.ymgal.model;
 
 /// <summary>
 /// Class for defining the version of the API

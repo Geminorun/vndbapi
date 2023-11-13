@@ -1,4 +1,4 @@
-﻿package com.ymgal.model.Errors;
+package com.ymgal.model.Errors;
 
 /// <summary>
 ///		The known Error Types that VndbSharp can handle

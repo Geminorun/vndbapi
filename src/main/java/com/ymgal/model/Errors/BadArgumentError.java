@@ -1,4 +1,4 @@
-﻿package com.ymgal.model.Errors;
+package com.ymgal.model.Errors;
 
 /// <summary>
 ///		A JSON value is of the wrong type or in the wrong format.

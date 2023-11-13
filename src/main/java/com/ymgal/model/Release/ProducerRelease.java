@@ -1,4 +1,4 @@
-﻿package com.ymgal.model.Release;
+package com.ymgal.model.Release;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ymgal.model.Common.ProducerCommon;

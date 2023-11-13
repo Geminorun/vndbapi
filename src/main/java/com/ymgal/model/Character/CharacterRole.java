@@ -1,4 +1,4 @@
-﻿package com.ymgal.model.Character;
+package com.ymgal.model.Character;
 
 /// <summary>
 /// Roles a Character may take

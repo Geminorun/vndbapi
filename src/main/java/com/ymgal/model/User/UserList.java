@@ -1,4 +1,4 @@
-﻿package com.ymgal.model.User;
+package com.ymgal.model.User;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

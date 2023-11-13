@@ -1,4 +1,4 @@
-﻿package com.ymgal.model.VisualNovel;
+package com.ymgal.model.VisualNovel;
 
 /// <summary>
 /// Visual Novel Length

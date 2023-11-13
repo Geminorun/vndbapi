@@ -1,4 +1,4 @@
-﻿package com.ymgal.model.Staff;
+package com.ymgal.model.Staff;
 
 import com.ymgal.model.Common.CommonLinks;
 
