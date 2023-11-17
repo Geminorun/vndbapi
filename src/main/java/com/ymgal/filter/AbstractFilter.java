@@ -3,10 +3,6 @@ package com.ymgal.filter;
 import com.ymgal.Interfaces.IFilter;
 import com.ymgal.model.FilterOperator;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
 /**
  * @Auther: lyl
  * @Date: 2023/11/13 15:17
@@ -30,15 +26,11 @@ public abstract class AbstractFilter<T> implements IFilter {
     /// Value
     /// </summary>
     protected T Value;
-    protected T[] ValueArr;
     /// <summary>
     ///		If an array is passed, the number of items.
     /// </summary>
     protected Integer Count;
-    /// <summary>
-    /// If the filter is an array
-    /// </summary>
-    protected Boolean IsArray;
+
     /// <summary>
     /// The name of the Filter
     /// </summary>
@@ -60,20 +52,9 @@ public abstract class AbstractFilter<T> implements IFilter {
         if (this.CanBeNull && (this.Value == null))
             return res + "null";
 
-        if (!this.IsArray)
-            return this.Type == String.class
-                    ? res + "\"" + this.Value + "\""
-                    : res + this.Value;
-
-        if (this.Count == 1 && this.IsArray) {
-            List<?> ts = Arrays.asList(this.ValueArr);
-            return this.Type == String.class
-                    ? res + "\"" + ts.get(0) + "\""
-                    : res + ts.get(0);
-        }
-        // Doesn't use the Contract Resolver, Some things *may* be funky,
-        // but should be fine for value types like Int32 / String
-        return res + Arrays.asList(this.ValueArr).stream().map(x -> x.toString()).collect(Collectors.joining(","));
+        return this.Type == String.class
+                ? res + "\"" + this.Value + "\""
+                : res + this.Value;
     }
 
     @Override

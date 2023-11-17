@@ -3,106 +3,108 @@ package com.ymgal.model.Character;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ymgal.model.Common.Gender;
 import com.ymgal.model.Common.ImageRating;
+import lombok.Data;
 
 import java.util.Date;
 import java.util.List;
 
+@Data
 public class Character {
     /// <summary>
     /// Character's ID on Vndb
     /// </summary>
-    public Integer Id;
+    private Integer Id;
     /// <summary>
     /// Character's Name
     /// </summary>
-    public String Name;
+    private String Name;
     /// <summary>
     /// Character's Japanese/Original Name
     /// </summary>=
     @JsonProperty("original")
-    public String OriginalName;
+    private String OriginalName;
     /// <summary>
     /// Character's Gender
     /// </summary>
-    public Gender Gender;
+    private Gender Gender;
     /// <summary>
     /// Actual Sex, if the gender is a spoiler
     /// </summary>
-    public Gender SpoilGender;
+    private Gender SpoilGender;
     /// <summary>
     /// Character's Gender
     /// </summary>
     @JsonProperty("bloodt")
-    public BloodType BloodType;
+    private BloodType BloodType;
     /// <summary>
     /// Character's Birthday
     /// </summary>
-    public Date Birthday;
+    private Date Birthday;
     /// <summary>
     /// Character's Aliases/Nicknames
     /// </summary>
-    public List<String> Aliases;
+    private List<String> Aliases;
     /// <summary>
     /// Description of the character
     /// </summary>
-    public String Description;
+    private String Description;
     /// <summary>
     /// Character's age in years
     /// </summary>
-    public Integer Age;
+    private Integer Age;
     /// <summary>
     /// Url Image of the character
     /// </summary>
-    public String Image;
+    private String Image;
     /// <summary>
     /// Properties of the character's image. This determines how violent/sexual it is
     /// </summary>
     @JsonProperty("image_flagging")
-    public ImageRating ImageRating;
+    private ImageRating ImageRating;
     /// <summary>
     ///		Size in Centimeters
     /// </summary>
-    public Integer Bust;
+    private Integer Bust;
     /// <summary>
     ///		Size in Centimeters
     /// </summary>
-    public Integer Waist;
+    private Integer Waist;
     /// <summary>
     ///		Size in Centimeters
     /// </summary>
-    public Integer Hip;
+    private Integer Hip;
     /// <summary>
     ///		Height in Centimeters
     /// </summary>
-    public Integer Height;
+    private Integer Height;
     /// <summary>
     ///		Weight in Kilograms
     /// </summary>
-    public Integer Weight;
+    private Integer Weight;
     /// <summary>
     /// CupSize of the character
     /// </summary>
     @JsonProperty("cup_size")
-    public String CupSize;
+    private String CupSize;
     /// <summary>
     /// List of traits the character has
     /// </summary>
-    public List<TraitMetadata> Traits;
+    private List<TraitMetadata> Traits;
     /// <summary>
     /// List of Visual Novels linked to this character
     /// </summary>
     @JsonProperty("vns")
-    public List<VisualNovelMetadata> VisualNovels;
+    private List<VisualNovelMetadata> VisualNovels;
     /// <summary>
     /// List of voice actresses (staff) that voiced this character, per VN
     /// </summary>
     @JsonProperty("voiced")
-    public List<VoiceActorMetadata> VoiceActorMetadata;
+    private List<VoiceActorMetadata> VoiceActorMetadata;
     /// <summary>
     /// List of instances of this character (excluding the character entry itself)
     /// </summary>
     @JsonProperty("instances")
-    public List<CharacterInstances> CharacterInstances;
+    private List<CharacterInstances> CharacterInstances;
 
 
 }

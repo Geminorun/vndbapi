@@ -2,6 +2,7 @@ package com.ymgal.helper;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
@@ -14,7 +15,7 @@ import java.util.Map;
  * @Description:
  */
 public class JsonHelper {
-    public static final ObjectMapper mapper = new ObjectMapper();
+    public static ObjectMapper mapper = new ObjectMapper();
 
     /**
      * @param obj
@@ -50,12 +51,24 @@ public class JsonHelper {
      */
     public static <T> T parse(String json, Class<T> tClass) {
         try {
+            mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
             return mapper.readValue(json, tClass);
         } catch (IOException e) {
             e.printStackTrace();
             return null;
         }
     }
+
+    public static <T> T parse(String json, TypeReference<T> valueTypeRef) {
+        try {
+            mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+            return mapper.readValue(json, valueTypeRef);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 
     /**
      * @param json

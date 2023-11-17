@@ -14,7 +14,7 @@ public class VndbFilters {
     /// <summary>
     /// Filters for Id
     /// </summary>
-    public static class Id extends AbstractFilter<Integer[]> {
+    public static class Id extends AbstractFilter<Integer> {
         /// <summary>
         /// Array of valid operators
         /// </summary>
@@ -27,8 +27,9 @@ public class VndbFilters {
         /// </summary>
         protected String FilterName = "id";
 
-        Id(Integer[] value, FilterOperator filterOperator) {
+        Id(Integer value, FilterOperator filterOperator) {
             super(value, filterOperator);
+            super.Value = value;
         }
 
         /// <summary>
@@ -36,7 +37,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Id Equals(Integer... value) {
+        public static Id Equals(Integer value) {
             return new Id(value, FilterOperator.Equal);
         }
 
@@ -50,7 +51,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Id NotEquals(Integer... value) {
+        public Id NotEquals(Integer value) {
             return new Id(value, FilterOperator.NotEqual);
         }
 
@@ -61,7 +62,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Id GreaterThan(Integer... value) {
+        public Id GreaterThan(Integer value) {
             return new Id(value, FilterOperator.GreaterThan);
         }
 
@@ -72,7 +73,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Id GreaterOrEqual(Integer... value) {
+        public Id GreaterOrEqual(Integer value) {
             return new Id(value, FilterOperator.GreaterOrEqual);
         }
 
@@ -83,7 +84,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Id LessThan(Integer... value) {
+        public Id LessThan(Integer value) {
             return new Id(value, FilterOperator.LessThan);
         }
 
@@ -94,7 +95,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Id LessOrEqual(Integer... value) {
+        public Id LessOrEqual(Integer value) {
             return new Id(value, FilterOperator.LessOrEqual);
         }
 
@@ -115,7 +116,7 @@ public class VndbFilters {
     /// <summary>
     /// Alias ID Filter
     /// </summary>
-    public class AliasId extends AbstractFilter<Integer[]> {
+    public class AliasId extends AbstractFilter<Integer> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -127,7 +128,7 @@ public class VndbFilters {
         /// </summary>
         protected String FilterName = "id";
 
-        AliasId(Integer[] value, FilterOperator filterOperator) {
+        AliasId(Integer value, FilterOperator filterOperator) {
             super(value, filterOperator);
         }
 
@@ -141,7 +142,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public AliasId Equals(Integer... value) {
+        public AliasId Equals(Integer value) {
             return new AliasId(value, FilterOperator.Equal);
         }
 
@@ -262,7 +263,7 @@ public class VndbFilters {
     /// <summary>
     /// Languages Filter
     /// </summary>
-    public class Languages extends AbstractFilter<String[]> {
+    public class Languages extends AbstractFilter<String> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -274,7 +275,7 @@ public class VndbFilters {
         /// </summary>
         protected String FilterName = "languages";
 
-        private Languages(String[] value, FilterOperator filterOperator) {
+        private Languages(String value, FilterOperator filterOperator) {
             super(value, filterOperator);
             this.CanBeNull = true;
         }
@@ -289,7 +290,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Languages Equals(String... value) {
+        public Languages Equals(String value) {
             return new Languages(value, FilterOperator.Equal);
         }
 
@@ -300,7 +301,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Languages NotEquals(String... value) {
+        public Languages NotEquals(String value) {
             return new Languages(value, FilterOperator.NotEqual);
         }
 
@@ -389,7 +390,7 @@ public class VndbFilters {
     /// <summary>
     /// Original Languge Filter
     /// </summary>
-    public class OriginalLanguage extends AbstractFilter<String[]> {
+    public class OriginalLanguage extends AbstractFilter<String> {
         /// <summary>
         /// Valid Operators
         /// </summary>
@@ -401,7 +402,7 @@ public class VndbFilters {
         /// </summary>
         protected String FilterName = "orig_lang";
 
-        private OriginalLanguage(String[] value, FilterOperator filterOperator) {
+        private OriginalLanguage(String value, FilterOperator filterOperator) {
             super(value, filterOperator);
         }
 
@@ -415,7 +416,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public OriginalLanguage Equals(String... value) {
+        public OriginalLanguage Equals(String value) {
             return new OriginalLanguage(value, FilterOperator.Equal);
         }
 
@@ -426,7 +427,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public OriginalLanguage NotEquals(String... value) {
+        public OriginalLanguage NotEquals(String value) {
             return new OriginalLanguage(value, FilterOperator.NotEqual);
         }
 
@@ -445,7 +446,7 @@ public class VndbFilters {
     /// <summary>
     /// Platforms Filter
     /// </summary>
-    public class Platforms extends AbstractFilter<String[]> {
+    public class Platforms extends AbstractFilter<String> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -457,7 +458,7 @@ public class VndbFilters {
         /// </summary>
         protected String FilterName = "platforms";
 
-        private Platforms(String[] value, FilterOperator filterOperator) {
+        private Platforms(String value, FilterOperator filterOperator) {
             super(value, filterOperator);
             this.CanBeNull = true;
         }
@@ -472,7 +473,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Platforms Equals(String... value) {
+        public Platforms Equals(String value) {
             return new Platforms(value, FilterOperator.Equal);
         }
 
@@ -481,7 +482,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Platforms NotEquals(String... value) {
+        public Platforms NotEquals(String value) {
             return new Platforms(value, FilterOperator.NotEqual);
         }
 
@@ -541,7 +542,7 @@ public class VndbFilters {
     /// <summary>
     /// Tags Filter
     /// </summary>
-    public class Tags extends AbstractFilter<Integer[]> {
+    public class Tags extends AbstractFilter<Integer> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -553,7 +554,7 @@ public class VndbFilters {
         /// </summary>
         protected String FilterName = "tags";
 
-        private Tags(Integer[] value, FilterOperator filterOperator) {
+        private Tags(Integer value, FilterOperator filterOperator) {
             super(value, filterOperator);
         }
 
@@ -567,7 +568,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Tags Equals(Integer... value) {
+        public Tags Equals(Integer value) {
             return new Tags(value, FilterOperator.Equal);
         }
 
@@ -576,7 +577,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Tags NotEquals(Integer... value) {
+        public Tags NotEquals(Integer value) {
             return new Tags(value, FilterOperator.NotEqual);
         }
 
@@ -597,7 +598,7 @@ public class VndbFilters {
     ///		<para>Chars that are linked to childs of the given trait are also included.</para>
     ///		<para>Be warned that this filter ignores spoiler settings, fetch the traits associated with the returned char to verify the spoiler level.</para>
     /// </summary>
-    public class Traits extends AbstractFilter<Integer[]> {
+    public class Traits extends AbstractFilter<Integer> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -609,7 +610,7 @@ public class VndbFilters {
         /// </summary>
         protected String FilterName = "traits";
 
-        private Traits(Integer[] value, FilterOperator filterOperator) {
+        private Traits(Integer value, FilterOperator filterOperator) {
             super(value, filterOperator);
         }
 
@@ -618,7 +619,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Traits Equals(Integer... value) {
+        public Traits Equals(Integer value) {
             return new Traits(value, FilterOperator.Equal);
         }
 
@@ -632,7 +633,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Traits NotEquals(Integer... value) {
+        public Traits NotEquals(Integer value) {
             return new Traits(value, FilterOperator.NotEqual);
         }
 
@@ -771,7 +772,7 @@ public class VndbFilters {
     /// <summary>
     /// Username Filter
     /// </summary>
-    public class Username extends AbstractFilter<String[]> {
+    public class Username extends AbstractFilter<String> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -783,7 +784,7 @@ public class VndbFilters {
         /// </summary>
         protected String FilterName = "username";
 
-        private Username(String[] value, FilterOperator filterOperator) {
+        private Username(String value, FilterOperator filterOperator) {
             super(value, filterOperator);
         }
 
@@ -797,7 +798,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Username Equals(String... value) {
+        public Username Equals(String value) {
             return new Username(value, FilterOperator.Equal);
         }
 
@@ -806,7 +807,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Username NotEquals(String... value) {
+        public Username NotEquals(String value) {
             return new Username(value, FilterOperator.NotEqual);
         }
 
@@ -815,7 +816,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Username Fuzzy(String... value) {
+        public Username Fuzzy(String value) {
             return new Username(value, FilterOperator.Fuzzy);
         }
 
@@ -834,7 +835,7 @@ public class VndbFilters {
     /// <summary>
     /// Visual Novel Filter
     /// </summary>
-    public class VisualNovel extends AbstractFilter<Integer[]> {
+    public class VisualNovel extends AbstractFilter<Integer> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -847,7 +848,7 @@ public class VndbFilters {
         /// </summary>
         protected String FilterName = "vn";
 
-        private VisualNovel(Integer[] value, FilterOperator filterOperator) {
+        private VisualNovel(Integer value, FilterOperator filterOperator) {
             super(value, filterOperator);
         }
 
@@ -861,7 +862,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public VisualNovel Equals(Integer... value) {
+        public VisualNovel Equals(Integer value) {
             return new VisualNovel(value, FilterOperator.Equal);
         }
 
@@ -870,7 +871,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public VisualNovel NotEquals(Integer... value) {
+        public VisualNovel NotEquals(Integer value) {
             return new VisualNovel(value, FilterOperator.NotEqual);
         }
 
@@ -880,7 +881,7 @@ public class VndbFilters {
         /// <param name="value"></param>
         /// <returns></returns>
         public VisualNovel GreaterThan(Integer value) {
-            return new VisualNovel(new Integer[]{value}, FilterOperator.GreaterThan);
+            return new VisualNovel(value, FilterOperator.GreaterThan);
         }
 
         /// <summary>
@@ -889,7 +890,7 @@ public class VndbFilters {
         /// <param name="value"></param>
         /// <returns></returns>
         public VisualNovel GreaterOrEqual(Integer value) {
-            return new VisualNovel(new Integer[]{value}, FilterOperator.GreaterOrEqual);
+            return new VisualNovel(value, FilterOperator.GreaterOrEqual);
         }
 
         /// <summary>
@@ -898,7 +899,7 @@ public class VndbFilters {
         /// <param name="value"></param>
         /// <returns></returns>
         public VisualNovel LessThan(Integer value) {
-            return new VisualNovel(new Integer[]{value}, FilterOperator.LessThan);
+            return new VisualNovel(value, FilterOperator.LessThan);
         }
 
         /// <summary>
@@ -907,10 +908,10 @@ public class VndbFilters {
         /// <param name="value"></param>
         /// <returns></returns>
         public VisualNovel LessOrEqual(Integer value) {
-            return new VisualNovel(new Integer[]{value}, FilterOperator.LessOrEqual);
+            return new VisualNovel(value, FilterOperator.LessOrEqual);
         }
 
-        // This may fail on filters where vn is only =...
+        // This may fail on filters where vn is only =
         /// <summary>
         /// Is Filter Valid
         /// </summary>
@@ -926,7 +927,7 @@ public class VndbFilters {
     /// <summary>
     /// Platform Filter
     /// </summary>
-    public class Platform extends AbstractFilter<String[]> {
+    public class Platform extends AbstractFilter<String> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -938,7 +939,7 @@ public class VndbFilters {
         /// </summary>
         protected String FilterName = "platforms";
 
-        private Platform(String[] value, FilterOperator filterOperator) {
+        private Platform(String value, FilterOperator filterOperator) {
             super(value, filterOperator);
         }
 
@@ -952,7 +953,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Platform Equals(String... value) {
+        public Platform Equals(String value) {
             return new Platform(value, FilterOperator.Equal);
         }
 
@@ -961,7 +962,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Platform NotEquals(String... value) {
+        public Platform NotEquals(String value) {
             return new Platform(value, FilterOperator.NotEqual);
         }
 
