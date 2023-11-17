@@ -122,17 +122,17 @@ public enum VndbFlags {
      * @param value 提供查询的枚举值（供拆分的枚举合计值，由一个或多个枚举index相加的值）
      * @return 返回符合条件的枚举列表
      */
-    public static List<VndbFlags> getDescs(int value) {
-        List<VndbFlags> result = new ArrayList<>();
+    public static List<String> getDescs(int value) {
+        List<String> result = new ArrayList<>();
         if (vndbFlagsMap.containsKey(value)) {
-            result.add(vndbFlagsMap.get(value));
+            result.add(vndbFlagsMap.get(value).desc);
             return result;
         }
         int currentValue = value;
         do {
             final int tempValue = currentValue;
             int maxValue = vndbFlagsMap.keySet().stream().filter(f -> f <= tempValue).max(Integer::compare).get();
-            result.add(vndbFlagsMap.get(maxValue));
+            result.add(vndbFlagsMap.get(maxValue).desc);
             currentValue -= maxValue;
         } while (currentValue > 0);
         return result;

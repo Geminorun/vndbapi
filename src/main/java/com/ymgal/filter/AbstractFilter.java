@@ -19,14 +19,9 @@ public abstract class AbstractFilter<T> implements IFilter {
     /// </summary>
     protected FilterOperator[] ValidOperators;
     /// <summary>
-    /// The name of the Filter
-    /// </summary>
-    protected String FilterName;
-    /// <summary>
     /// Can Be Null
     /// </summary>
     protected Boolean CanBeNull = false;
-
     /// <summary>
     /// The selected FilterOperator
     /// </summary>
@@ -35,7 +30,6 @@ public abstract class AbstractFilter<T> implements IFilter {
     /// Value
     /// </summary>
     protected T Value;
-
     protected T[] ValueArr;
     /// <summary>
     ///		If an array is passed, the number of items.
@@ -45,7 +39,9 @@ public abstract class AbstractFilter<T> implements IFilter {
     /// If the filter is an array
     /// </summary>
     protected Boolean IsArray;
-
+    /// <summary>
+    /// The name of the Filter
+    /// </summary>
     private Class<?> Type;
 
     protected AbstractFilter(T value, FilterOperator filterOperator) {
@@ -54,9 +50,12 @@ public abstract class AbstractFilter<T> implements IFilter {
         this.Type = value.getClass();
     }
 
+
+    public abstract String getFilterName();
+
     @Override
     public String toString() {
-        String res = this.FilterName + this.Operator;
+        String res = this.getFilterName() + this.Operator;
 
         if (this.CanBeNull && (this.Value == null))
             return res + "null";

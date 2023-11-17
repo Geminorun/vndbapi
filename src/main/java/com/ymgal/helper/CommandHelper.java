@@ -52,8 +52,9 @@ public class CommandHelper {
                 fullFlags = 0;
                 break;
         }
-        String fullCommand = VndbFlags.getDescs(fullFlags).stream().map(x -> x.getDesc()).collect(Collectors.joining(","));
+        String fullCommand = VndbFlags.getDescs(fullFlags).stream().collect(Collectors.joining(","));
         return fullCommand;
     }
+
 
 }

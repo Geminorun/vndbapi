@@ -5,6 +5,7 @@ import com.ymgal.model.FilterOperator;
 import java.util.Arrays;
 import java.util.Date;
 
+
 // Not public yet
 /// <summary>
 /// Available Filters
@@ -13,7 +14,7 @@ public class VndbFilters {
     /// <summary>
     /// Filters for Id
     /// </summary>
-    public class Id extends AbstractFilter<Integer[]> {
+    public static class Id extends AbstractFilter<Integer[]> {
         /// <summary>
         /// Array of valid operators
         /// </summary>
@@ -35,11 +36,14 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Id Equals(Integer... value) {
+        public static Id Equals(Integer... value) {
             return new Id(value, FilterOperator.Equal);
         }
 
-        ;
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
+        }
 
         /// <summary>
         /// Not Equals Filter
@@ -127,6 +131,11 @@ public class VndbFilters {
             super(value, filterOperator);
         }
 
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
+        }
+
         /// <summary>
         /// Equality Filter
         /// </summary>
@@ -165,6 +174,11 @@ public class VndbFilters {
         private Released(Date value, FilterOperator filterOperator) {
             super(value.toString(), filterOperator);
             this.CanBeNull = true;
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         /// <summary>
@@ -265,6 +279,11 @@ public class VndbFilters {
             this.CanBeNull = true;
         }
 
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
+        }
+
         /// <summary>
         /// Equality Filter
         /// </summary>
@@ -320,6 +339,11 @@ public class VndbFilters {
         public OriginalName(String value, FilterOperator filterOperator) {
             super(value, filterOperator);
             this.CanBeNull = true;
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         /// <summary>
@@ -381,6 +405,11 @@ public class VndbFilters {
             super(value, filterOperator);
         }
 
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
+        }
+
         /// <summary>
         /// Equality Filter
         /// </summary>
@@ -433,6 +462,11 @@ public class VndbFilters {
             this.CanBeNull = true;
         }
 
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
+        }
+
         /// <summary>
         /// Equality Filter
         /// </summary>
@@ -480,6 +514,11 @@ public class VndbFilters {
             super(value, filterOperator);
         }
 
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
+        }
+
         /// <summary>
         /// Fuzzy Search
         /// </summary>
@@ -516,6 +555,11 @@ public class VndbFilters {
 
         private Tags(Integer[] value, FilterOperator filterOperator) {
             super(value, filterOperator);
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         /// <summary>
@@ -578,6 +622,11 @@ public class VndbFilters {
             return new Traits(value, FilterOperator.Equal);
         }
 
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
+        }
+
         /// <summary>
         /// Not Equals Filter
         /// </summary>
@@ -614,6 +663,11 @@ public class VndbFilters {
 
         private Title(String value, FilterOperator filterOperator) {
             super(value, filterOperator);
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         /// <summary>
@@ -672,6 +726,11 @@ public class VndbFilters {
             super(value, filterOperator);
         }
 
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
+        }
+
         /// <summary>
         /// Equality Filter
         /// </summary>
@@ -726,6 +785,11 @@ public class VndbFilters {
 
         private Username(String[] value, FilterOperator filterOperator) {
             super(value, filterOperator);
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         /// <summary>
@@ -785,6 +849,11 @@ public class VndbFilters {
 
         private VisualNovel(Integer[] value, FilterOperator filterOperator) {
             super(value, filterOperator);
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         /// <summary>
@@ -871,6 +940,11 @@ public class VndbFilters {
 
         private Platform(String[] value, FilterOperator filterOperator) {
             super(value, filterOperator);
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         /// <summary>

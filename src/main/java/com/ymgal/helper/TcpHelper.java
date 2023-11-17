@@ -15,6 +15,8 @@ public class TcpHelper {
     private static Socket socket;
 
     private static OutputStream outputStream;
+    private static InputStream inputStream;
+
 
     public static void Login() {
         try {
@@ -28,7 +30,7 @@ public class TcpHelper {
             bw.write(printText);
             bw.flush();
 
-            InputStream inputStream = socket.getInputStream();
+            inputStream = socket.getInputStream();
             StringBuilder builder = new StringBuilder();
             byte[] buffer = new byte[4096];
             int len;
@@ -48,28 +50,37 @@ public class TcpHelper {
         }
     }
 
-    public static String SetInputStream(String cmd) {
+    public static void sendData(String cmd) {
         try {
 
             if (!socket.isConnected()) {
                 Login();
             }
-
-            char end = 0x04;
-            String printText = cmd + end;
+            String printText = cmd + EotChar;
 //            OutputStream outputStream = socket.getOutputStream();        //建立客户端信息输出流
             PrintWriter printWriter = new PrintWriter(outputStream);
             printWriter.print(printText);
             printWriter.flush();
             socket.shutdownOutput();
 
-            InputStream inputStream = socket.getInputStream();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static String getResponse() {
+        try {
+
+            if (!socket.isConnected()) {
+                Login();
+            }
+
             StringBuilder builder = new StringBuilder();
             byte[] buffer = new byte[4096];
             int len;
             while ((len = inputStream.read(buffer, 0, buffer.length)) > 0) {
                 builder.append(new String(buffer, 0, len));
-                if (buffer[--len] == end)
+                if (buffer[--len] == EotChar)
                     break;
             }
             String data = builder.toString();
