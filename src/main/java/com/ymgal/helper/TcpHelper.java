@@ -51,21 +51,17 @@ public class TcpHelper {
     }
 
     public static void sendData(String cmd) {
-        try {
 
-            if (!socket.isConnected()) {
-                Login();
-            }
-            String printText = cmd + EotChar;
-//            OutputStream outputStream = socket.getOutputStream();        //建立客户端信息输出流
-            PrintWriter printWriter = new PrintWriter(outputStream);
-            printWriter.print(printText);
-            printWriter.flush();
-            socket.shutdownOutput();
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        if (!socket.isConnected()) {
+            Login();
         }
+        String printText = cmd + EotChar;
+//            OutputStream outputStream = socket.getOutputStream();        //建立客户端信息输出流
+        PrintWriter printWriter = new PrintWriter(outputStream);
+        printWriter.print(printText);
+        printWriter.flush();
+        //socket.shutdownOutput();
+
     }
 
     public static String getResponse() {
