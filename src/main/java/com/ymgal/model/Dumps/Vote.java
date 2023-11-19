@@ -1,10 +1,13 @@
 package com.ymgal.model.Dumps;
 
+import lombok.Data;
+
 import java.util.Date;
 
 /// <summary>
 /// Vote Object from the Dump
 /// </summary>
+@Data
 public class Vote {
     /// <summary>
     /// Version of the Dump

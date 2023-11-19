@@ -1,12 +1,14 @@
 package com.ymgal.model.Dumps;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 import java.util.List;
 
 /// <summary>
 ///		Represents a Tag Object from the Tags Dump
 /// </summary>
+@Data
 public class Tag {
     /// <summary>
     ///		The Id of the tag

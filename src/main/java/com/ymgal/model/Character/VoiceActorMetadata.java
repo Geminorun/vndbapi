@@ -1,10 +1,12 @@
 package com.ymgal.model.Character;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 /// <summary>
 /// Metadata about a voice actor
 /// </summary>
+@Data
 public class VoiceActorMetadata {
     /// <summary>
     /// Staff Id

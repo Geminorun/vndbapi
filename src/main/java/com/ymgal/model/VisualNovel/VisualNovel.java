@@ -1,10 +1,8 @@
 package com.ymgal.model.VisualNovel;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ymgal.model.Common.ImageRating;
 import lombok.Data;
 
-import java.util.Date;
 import java.util.List;
 
 /// <summary>
@@ -15,38 +13,35 @@ public class VisualNovel {
     /// <summary>
     /// Visual Novel ID
     /// </summary>
-    private Integer Id;
+    private Integer id;
     /// <summary>
     /// Vn Name
     /// </summary>
-    @JsonProperty("title")
-    private String Name;
+    private String title;
     /// <summary>
     /// Vn Original Name
     /// </summary>
-    @JsonProperty("original")
-    private String OriginalName;
+    private String original;
     /// <summary>
     /// Release Date
     /// </summary>
-    private Date Released; // Release or Released?
+    private String released; // Release or Released?
     /// <summary>
     /// List of available languages
     /// </summary>
-    private List<String> Languages;
+    private List<String> languages;
     /// <summary>
     /// languages of the first release
     /// </summary>
-    @JsonProperty("orig_lang")
-    private List<String> OriginalLanguages;
+    private List<String> orig_lang;
     /// <summary>
     /// List of platforms released on
     /// </summary>
-    private List<String> Platforms;
+    private List<String> platforms;
     /// <summary>
     /// List of aliases for the game
     /// </summary>
-    private List<String> Aliases;
+    private String aliases;
     /// <summary>
     /// Estimated length of the game
     /// </summary>
@@ -54,55 +49,51 @@ public class VisualNovel {
     /// <summary>
     /// Description of the game. Can include formatting codes
     /// </summary>
-    private String Description;
+    private String description;
     /// <summary>
     /// Links related to this game
     /// </summary>
-    @JsonProperty("links")
-    private VisualNovelLinks VisualNovelLinks;
+    private VisualNovelLinks links;
     /// <summary>
     /// Cover Image URL
     /// </summary>
-    private String Image;
+    private String image;
     /// <summary>
     /// Is Image NSFW
     /// </summary>
-    @JsonProperty("image_nsfw")
-    private Boolean IsImageNsfw;
+    private Boolean image_nsfw;
     /// <summary>
     /// Violence/Sexual rating of the cover image
     /// </summary>
-    @JsonProperty("image_flagging")
-    private ImageRating ImageRating;
+    private ImageRating image_flagging;
     /// <summary>
     /// List of related Anime
     /// </summary>
-    private List<AnimeMetadata> Anime;
+    private List<AnimeMetadata> anime;
     /// <summary>
     /// List of related games
     /// </summary>
-    private List<VisualNovelRelation> Relations;
+    private List<VisualNovelRelation> relations;
     /// <summary>
     /// List of associated Tags
     /// </summary>
-    private List<TagMetadata> Tags;
+    private List<Integer[]> tags;
     /// <summary>
     /// Popularity of the game (between 0 and 100)
     /// </summary>
-    private Double Popularity;
+    private Double popularity;
     /// <summary>
     /// Bayesian rating of the game (between 1 and 10)
     /// </summary>
-    private double Rating;
+    private Double rating;
     /// <summary>
     /// List of associated Screenshots
     /// </summary>
-    @JsonProperty("screens")
-    private List<ScreenshotMetadata> Screenshots;
+    private List<ScreenshotMetadata> screens;
     /// <summary>
     /// List of associated Staff
     /// </summary>
-    private List<StaffMetadata> Staff;
+    private List<StaffMetadata> staff;
 
     private VisualNovel() {
     }

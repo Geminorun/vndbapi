@@ -31,13 +31,14 @@ public class SocketTest {
         return null;
     }
 
-    public static VndbResponse<VisualNovel> GetVisualNovelAsync(String filters, VndbFlags flags, IRequestOptions options) {
+    public static VndbResponse<VisualNovel> GetVisualNovelAsync(String filters, IRequestOptions options) {
         String method = Constants.GetVisualNovelCommand;
         System.out.println(method);
         // Need a way to communicate to the end user that these null values are not from the API?
-        Integer vndbFlag = VndbUtils.getVndbFlag(method, flags);
+        Integer vndbFlag = VndbUtils.getVndbFlag(method);
         String fields = VndbFlags.getDescs(vndbFlag).stream().collect(Collectors.joining(",", " ", " "));
         String cmd = method + fields + "(" + filters + ")";
+        System.out.println("TCP CMD:" + cmd);
 
         TypeReference<VndbResponse<VisualNovel>> responseType = new TypeReference<VndbResponse<VisualNovel>>() {
         };
@@ -48,8 +49,8 @@ public class SocketTest {
     public void tcpTest() {
         TcpHelper.Login();
         String filters = VndbFilters.Id.Equals(18).toString();
-        VndbResponse<VisualNovel> visualNovelVndbResponse = GetVisualNovelAsync(filters, VndbFlags.Basic, null);
-        //TcpHelper.Loginout();
+        VndbResponse<VisualNovel> visualNovelVndbResponse = GetVisualNovelAsync(filters, null);
+        TcpHelper.Loginout();
     }
 
 }

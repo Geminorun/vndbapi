@@ -1,10 +1,12 @@
 package com.ymgal.model.Release;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 /// <summary>
 /// Visual Novel Info related to Release
 /// </summary>
+@Data
 public class VisualNovelMetadata {
     /// <summary>
     /// Visual Novel ID

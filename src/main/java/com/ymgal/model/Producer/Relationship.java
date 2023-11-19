@@ -1,10 +1,12 @@
 package com.ymgal.model.Producer;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 /// <summary>
 /// Producer Relation info
 /// </summary>
+@Data
 public class Relationship {
     /// <summary>
     /// Producer ID

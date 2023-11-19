@@ -1,10 +1,12 @@
 package com.ymgal.model.Common;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 /// <summary>
 /// Common Producer properties
 /// </summary>
+@Data
 public class ProducerCommon {
     /// <summary>
     /// Producer ID

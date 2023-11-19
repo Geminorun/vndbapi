@@ -1,37 +1,38 @@
 package com.ymgal.model.VisualNovel;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 /// <summary>
 /// Staff Metadata
 /// </summary>
+@Data
 public class StaffMetadata {
     /// <summary>
     /// Staff ID
     /// </summary>
-    @JsonProperty("sid")
-    public Integer StaffId;
+    public Integer sid;
     /// <summary>
     /// Alias ID
     /// </summary>
-    @JsonProperty("aid")
-    public Integer AliasId;
+    public Integer aid;
     /// <summary>
     /// English Name
     /// </summary>
-    public String Name;
+    public String name;
+
     /// <summary>
     /// Japanese Name
     /// </summary>
-    public String Kanji;
+    public String original;
     /// <summary>
     ///		The role they served as staff
     /// </summary>
-    public String Role; // TODO: Convert to enum
+    public String role; // TODO: Convert to enum
     /// <summary>
     ///		Contains more info on their role as staff
     /// </summary>
-    public String Note;
+    public String note;
+
     private StaffMetadata() {
     }
 }

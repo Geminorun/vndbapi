@@ -1,5 +1,7 @@
 package com.ymgal.model.Character;
 
+import lombok.Data;
+
 /// <summary>
 /// Roles a Character may take
 /// </summary>

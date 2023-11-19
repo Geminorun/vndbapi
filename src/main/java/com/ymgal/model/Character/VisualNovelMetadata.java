@@ -1,10 +1,12 @@
 package com.ymgal.model.Character;
 
 import com.ymgal.model.Common.SpoilerLevel;
+import lombok.Data;
 
 /// <summary>
 /// Metadata about a VN
 /// </summary>
+@Data
 public class VisualNovelMetadata {
     /// <summary>
     /// Visual Novel ID
@@ -22,6 +24,7 @@ public class VisualNovelMetadata {
     /// Character Role
     /// </summary>
     public CharacterRole Role;
+
     protected VisualNovelMetadata(Integer Id, Integer ReleaseId, SpoilerLevel spoilerLevel, CharacterRole characterRole) {
         this.Id = Id;
         this.ReleaseId = ReleaseId;

@@ -1,6 +1,7 @@
 package com.ymgal.model.Release;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 import java.util.Date;
 import java.util.List;
@@ -8,6 +9,7 @@ import java.util.List;
 /// <summary>
 /// Release Information
 /// </summary>
+@Data
 public class Release {
     /// <summary>
     /// Release ID

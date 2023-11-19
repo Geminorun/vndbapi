@@ -1,21 +1,20 @@
 package com.ymgal.model.VisualNovel;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ymgal.model.Common.CommonLinks;
+import lombok.Data;
 
 /// <summary>
 /// Visual Novel Links
 /// </summary>
+@Data
 public class VisualNovelLinks extends CommonLinks {
     /// <summary>
     /// Encubed Link
     /// </summary>
-    @JsonProperty("encubed")
-    public String Encubed;
+    public String encubed;
     /// <summary>
     /// Renai Link
     /// </summary>
-    @JsonProperty("renai")
-    public String Renai;
+    public String renai;
 }
 

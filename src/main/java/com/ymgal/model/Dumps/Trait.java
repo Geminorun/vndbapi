@@ -1,12 +1,14 @@
 package com.ymgal.model.Dumps;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 import java.util.List;
 
 /// <summary>
 /// Represents a Trait Object from the Traits Dump
 /// </summary>
+@Data
 public class Trait {
     /// <summary>
     ///		The Id of the trait

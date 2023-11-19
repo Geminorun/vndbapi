@@ -1,6 +1,7 @@
 package com.ymgal.model.User;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -9,6 +10,7 @@ import java.util.List;
 /// <summary>
 /// User Lists
 /// </summary>
+@Data
 public class UserList {
     /// <summary>
     /// User ID

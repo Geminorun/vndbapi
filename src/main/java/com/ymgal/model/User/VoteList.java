@@ -1,12 +1,14 @@
 package com.ymgal.model.User;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 import java.time.LocalDateTime;
 
 /// <summary>
 /// User VoteList
 /// </summary>
+@Data
 public class VoteList {
     /// <summary>
     /// Visual Novel ID

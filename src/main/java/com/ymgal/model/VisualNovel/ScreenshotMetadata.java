@@ -1,38 +1,35 @@
 package com.ymgal.model.VisualNovel;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ymgal.model.Common.ImageRating;
+import lombok.Data;
 
 /// <summary>
 /// Screenshot Metadata
 /// </summary>
+@Data
 public class ScreenshotMetadata {
     /// <summary>
     /// Image URL
     /// </summary>
-    @JsonProperty("image")
-    public String Url;
+    public String image;
     /// <summary>
     /// Release ID
     /// </summary>
-    @JsonProperty("rid")
-    public String ReleaseId;
+    public Integer rid;
     /// <summary>
     /// Is Image NSFW
     /// </summary>
-    @JsonProperty("nsfw")
-    public Boolean IsNsfw;
+    public Boolean nsfw;
     /// <summary>
     /// Violence/Sexual rating of Image
     /// </summary>
-    @JsonProperty("flagging")
-    public ImageRating ImageRating;
+    public ImageRating flagging;
     /// <summary>
     /// Image height in pixels
     /// </summary>
-    public Integer Height;
+    public Integer height;
     /// <summary>
     /// Image width in pixels
     /// </summary>
-    public Integer Width;
+    public Integer width;
 }

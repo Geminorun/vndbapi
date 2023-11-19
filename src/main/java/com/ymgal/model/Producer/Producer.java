@@ -1,12 +1,14 @@
 package com.ymgal.model.Producer;
 
 import com.ymgal.model.Common.ProducerCommon;
+import lombok.Data;
 
 import java.util.List;
 
 /// <summary>
 /// Producer Information
 /// </summary>
+@Data
 public class Producer extends ProducerCommon {
     /// <summary>
     /// Primary Language

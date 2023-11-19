@@ -1,10 +1,12 @@
 package com.ymgal.model.User;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 /// <summary>
 /// User Labels
 /// </summary>
+@Data
 public class UserLabels {
     /// <summary>
     /// User ID

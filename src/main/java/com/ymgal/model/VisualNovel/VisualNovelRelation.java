@@ -1,31 +1,31 @@
 package com.ymgal.model.VisualNovel;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 /// <summary>
 /// Visual Novel Relations
 /// </summary>
+@Data
 public class VisualNovelRelation {
     /// <summary>
     /// Visual Novel Id
     /// </summary>
-    public Integer Id;
+    public Integer id;
     /// <summary>
     /// Relation Type
     /// </summary>
-    @JsonProperty("relation")
-    public RelationType Type;
+    public String relation;
     /// <summary>
     /// Title
     /// </summary>
-    public String Title;
+    public String title;
     /// <summary>
     /// Original Title
     /// </summary>
-    public String Original;
+    public String original;
     /// <summary>
     /// Is Official relation
     /// </summary>
-    public Boolean Official;
+    public Boolean official;
 
 }

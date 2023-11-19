@@ -1,10 +1,12 @@
 package com.ymgal.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 /// <summary>
 /// Stats about the VNDB Database
 /// </summary>
+@Data
 public class DatabaseStats {
     /// <summary>
     /// AMount of Users in the DB

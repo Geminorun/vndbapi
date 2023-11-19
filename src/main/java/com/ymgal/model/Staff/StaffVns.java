@@ -1,10 +1,12 @@
 package com.ymgal.model.Staff;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 /// <summary>
 /// Visual Novels that the Staff worked on
 /// </summary>
+@Data
 public class StaffVns {
     /// <summary>
     /// Staff Id

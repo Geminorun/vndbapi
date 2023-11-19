@@ -1,5 +1,7 @@
 package com.ymgal.model.VisualNovel;
 
+import lombok.Data;
+
 /// <summary>
 /// Visual Novel Relations
 /// </summary>

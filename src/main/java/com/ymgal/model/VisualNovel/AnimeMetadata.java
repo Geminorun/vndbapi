@@ -1,47 +1,41 @@
 package com.ymgal.model.VisualNovel;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 import java.util.Date;
 
 /// <summary>
 /// Anime Metadata
 /// </summary>
+@Data
 public class AnimeMetadata {
     /// <summary>
     /// AniDb ID
     /// </summary>
-    @JsonProperty("id")
-    public Integer AniDbId;
+    public Integer id;
     /// <summary>
     /// AnimeNewsNetwork ID
     /// </summary>
-    @JsonProperty("ann_id")
-    public Integer AnimeNewsNetworkId;
+    public Integer ann_id;
     /// <summary>
     /// AnimeNfo ID
     /// </summary>
-    @JsonProperty("nfo_id")
-    public String AnimeNfoId;
+    public String nfo_id;
     /// <summary>
     /// English Title
     /// </summary>
-    @JsonProperty("title_romaji")
-    public String RomajiTitle;
+    public String title_romaji;
     /// <summary>
     /// Japanese Title
     /// </summary>
-    @JsonProperty("title_kanji")
-    public String KanjiTitle;
+    public String title_kanji;
     /// <summary>
     /// Year anime aired
     /// </summary>
-    @JsonProperty("year")
-    public Date AiringYear;
+    public Date year;
     /// <summary>
     /// Anime Type
     /// </summary>
-    @JsonProperty("type")
-    public String Type; // ??
+    public String type; // ??
 }
 

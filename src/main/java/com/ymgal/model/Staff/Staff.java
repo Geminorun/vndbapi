@@ -2,12 +2,14 @@ package com.ymgal.model.Staff;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ymgal.model.Common.Gender;
+import lombok.Data;
 
 import java.util.List;
 
 /// <summary>
 /// Staff Information
 /// </summary>
+@Data
 public class Staff {
     /// <summary>
     /// Staff Id

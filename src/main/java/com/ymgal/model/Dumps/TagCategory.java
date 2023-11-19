@@ -1,5 +1,7 @@
 package com.ymgal.model.Dumps;
 
+import lombok.Data;
+
 /// <summary>
 ///		Indicates what type the tag is
 /// </summary>

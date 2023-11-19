@@ -1,6 +1,5 @@
 package com.ymgal;
 
-import com.ymgal.model.VndbFlags;
 import com.ymgal.model.VndbFlagsConstant;
 
 /**
@@ -10,7 +9,7 @@ import com.ymgal.model.VndbFlagsConstant;
  */
 public class VndbUtils {
 
-    public static Integer getVndbFlag(String method, VndbFlags flags) {
+    public static Integer getVndbFlag(String method) {
         Integer fullFlags = 0;
         switch (method) {
             case Constants.GetVisualNovelCommand:
@@ -49,7 +48,7 @@ public class VndbUtils {
             default:
                 break;
         }
-        return flags.getValue() & fullFlags;
+        return fullFlags;
     }
 
 }

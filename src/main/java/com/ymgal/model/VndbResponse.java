@@ -1,6 +1,5 @@
 package com.ymgal.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.List;
@@ -10,17 +9,16 @@ public class VndbResponse<T> {
     /// <summary>
     /// If there are more items available
     /// </summary>
-    @JsonProperty("more")
-    private Boolean HasMore;
-    @JsonProperty("num")
-    private Integer Count;
+    private Boolean more;
+
+    private Integer num;
     /// <summary>
     /// Amount of items received
     /// </summary>
     /// <summary>
     /// Collection of entries. This is what holds the main data
     /// </summary>
-    private List<T> Items;
+    private List<T> items;
 
     // Disable publicly constructing the Response Object
     private VndbResponse() {

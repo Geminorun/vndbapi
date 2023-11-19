@@ -1,10 +1,12 @@
 package com.ymgal.model.Staff;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 /// <summary>
 /// Staff Aliases
 /// </summary>
+@Data
 public class StaffAliases {
     /// <summary>
     /// Staff Id

@@ -1,10 +1,12 @@
 package com.ymgal.model.Staff;
 
 import com.ymgal.model.Common.CommonLinks;
+import lombok.Data;
 
 /// <summary>
 /// List of Staff Links
 /// </summary>
+@Data
 public class StaffLinks extends CommonLinks {
     /// <summary>
     /// Official Homepage

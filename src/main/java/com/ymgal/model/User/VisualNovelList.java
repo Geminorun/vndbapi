@@ -2,12 +2,14 @@ package com.ymgal.model.User;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ymgal.model.Common.Status;
+import lombok.Data;
 
 import java.time.LocalDateTime;
 
 /// <summary>
 /// List of VNs on a user's list
 /// </summary>
+@Data
 public class VisualNovelList {
     /// <summary>
     /// Visual Novel ID

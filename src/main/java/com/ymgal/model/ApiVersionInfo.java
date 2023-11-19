@@ -1,8 +1,11 @@
 package com.ymgal.model;
 
+import lombok.Data;
+
 /// <summary>
 /// Class for defining the version of the API
 /// </summary>
+@Data
 public class ApiVersionInfo {
     /// <summary>
     /// Date of the API Version
