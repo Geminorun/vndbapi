@@ -1,7 +1,5 @@
 package com.ymgal.model.Staff;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.ymgal.model.Common.Gender;
 import lombok.Data;
 
 import java.util.List;
@@ -14,49 +12,49 @@ public class Staff {
     /// <summary>
     /// Staff Id
     /// </summary>
-    public Integer Id;
+    private Integer id;
     /// <summary>
     /// Staff Name
     /// </summary>
-    public String Name;
+    private String name;
     /// <summary>
     /// Staff Original Name
     /// </summary>
-    @JsonProperty("original")
-    public String OriginalName;
+    private String original;
     /// <summary>
     /// Staff Gender
     /// </summary>
-    public Gender Gender;
+    //private Gender gender;
+    private String gender;
+
     /// <summary>
     /// Primary Language
     /// </summary>
-    public String Language;
+    private String language;
     /// <summary>
     /// Related Staff links
     /// </summary>
-    @JsonProperty("links")
-    public StaffLinks StaffLinks;
+    private StaffLinks links;
     /// <summary>
     /// Staff Description
     /// </summary>
-    public String Description;
+    private String description;
     /// <summary>
     /// List of names and aliases
     /// </summary>
-    public List<StaffAliases> Aliases;
+    //private List<StaffAliases> aliases;
+    private List<Object[]> aliases;
     /// <summary>
     /// Main alias
     /// </summary>
-    @JsonProperty("main_alias")
-    public String MainAlias;
+    private Integer main_alias;
     /// <summary>
     /// Vns that the staff member has worked on
     /// </summary>
-    public StaffVns[] Vns;
+    private List<StaffVns> vns;
     /// <summary>
     /// List of Characters this staff has voiced
     /// </summary>
-    public StaffVoiced[] Voiced;
+    private List<StaffVoiced> voiced;
 }
 

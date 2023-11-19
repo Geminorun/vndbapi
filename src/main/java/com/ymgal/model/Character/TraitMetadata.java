@@ -11,15 +11,11 @@ public class TraitMetadata {
     /// <summary>
     /// Trait ID
     /// </summary>
-    public Integer Id;
+    private Integer Id;
     /// <summary>
     /// Spoiler level of Trait
     /// </summary>
-    public SpoilerLevel SpoilerLevel;
+    private SpoilerLevel SpoilerLevel;
 
-    public TraitMetadata(Integer id, SpoilerLevel spoilerLevel) {
-        Id = id;
-        SpoilerLevel = spoilerLevel;
-    }
 }
 

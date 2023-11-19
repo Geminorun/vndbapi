@@ -14,20 +14,20 @@ public class VoteList {
     /// Visual Novel ID
     /// </summary>
     @JsonProperty("vn")
-    public Integer VisualNovelId;
+    private Integer VisualNovelId;
     /// <summary>
     /// User ID
     /// </summary>
     @JsonProperty("uid")
-    public Integer UserId;
+    private Integer UserId;
     /// <summary>
     /// Current Vote (between 10 and 100)
     /// </summary>
-    public Integer Vote;
+    private Integer Vote;
     /// <summary>
     /// Added on Date
     /// </summary>
     @JsonProperty("added")
-    public LocalDateTime AddedOn;
+    private LocalDateTime AddedOn;
 }
 

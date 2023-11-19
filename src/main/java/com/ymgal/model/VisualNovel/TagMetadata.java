@@ -15,16 +15,16 @@ public class TagMetadata {
     /// <summary>
     /// Tag Id
     /// </summary>
-    public Integer Id;
+    private Integer Id;
     /// <summary>
     /// Tag Score
     /// </summary>
-    public Double Score;
+    private Double Score;
     /// <summary>
     /// Tag Spoiler Level
     /// </summary>
     @JsonProperty("spoiler")
-    public SpoilerLevel SpoilerLevel;
+    private SpoilerLevel SpoilerLevel;
 
     public TagMetadata(ArrayList array) {
         this.Id = (Integer) array.get(0);

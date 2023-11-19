@@ -11,6 +11,6 @@ public class ProducerLinks extends CommonLinks {
     /// <summary>
     /// Producer's homepage
     /// </summary>
-    public String Homepage;
+    private String homepage;
 }
 

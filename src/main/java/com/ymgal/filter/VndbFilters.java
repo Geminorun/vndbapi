@@ -41,65 +41,55 @@ public class VndbFilters {
             return new Id(value, FilterOperator.Equal);
         }
 
-        @Override
-        public String getFilterName() {
-            return this.FilterName;
-        }
-
         /// <summary>
         /// Not Equals Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Id NotEquals(Integer value) {
+        public static Id NotEquals(Integer value) {
             return new Id(value, FilterOperator.NotEqual);
         }
-
-        ;
 
         /// <summary>
         /// Greater Than Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Id GreaterThan(Integer value) {
+        public static Id GreaterThan(Integer value) {
             return new Id(value, FilterOperator.GreaterThan);
         }
-
-        ;
 
         /// <summary>
         /// Greater or Equal To Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Id GreaterOrEqual(Integer value) {
+        public static Id GreaterOrEqual(Integer value) {
             return new Id(value, FilterOperator.GreaterOrEqual);
         }
-
-        ;
 
         /// <summary>
         /// Less Than Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Id LessThan(Integer value) {
+        public static Id LessThan(Integer value) {
             return new Id(value, FilterOperator.LessThan);
         }
-
-        ;
 
         /// <summary>
         /// Less Than or Equal To Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Id LessOrEqual(Integer value) {
+        public static Id LessOrEqual(Integer value) {
             return new Id(value, FilterOperator.LessOrEqual);
         }
 
-        ;
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
+        }
 
         /// <summary>
         /// Is the Filter Valid
@@ -116,7 +106,7 @@ public class VndbFilters {
     /// <summary>
     /// Alias ID Filter
     /// </summary>
-    public class AliasId extends AbstractFilter<Integer> {
+    public static class AliasId extends AbstractFilter<Integer> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -132,18 +122,18 @@ public class VndbFilters {
             super(value, filterOperator);
         }
 
-        @Override
-        public String getFilterName() {
-            return this.FilterName;
-        }
-
         /// <summary>
         /// Equality Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public AliasId Equals(Integer value) {
+        public static AliasId Equals(Integer value) {
             return new AliasId(value, FilterOperator.Equal);
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         /// <summary>
@@ -159,7 +149,7 @@ public class VndbFilters {
     /// <summary>
     /// Released Filter
     /// </summary>
-    public class Released extends AbstractFilter<String> {
+    public static class Released extends AbstractFilter<String> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -177,76 +167,64 @@ public class VndbFilters {
             this.CanBeNull = true;
         }
 
-        @Override
-        public String getFilterName() {
-            return this.FilterName;
-        }
-
         /// <summary>
         /// Equality Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Released Equals(Date value) {
+        public static Released Equals(Date value) {
             return new Released(value, FilterOperator.Equal);
         }
-
-        ;
 
         /// <summary>
         /// Not Equals Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Released NotEquals(Date value) {
+        public static Released NotEquals(Date value) {
             return new Released(value, FilterOperator.NotEqual);
         }
-
-        ;
 
         /// <summary>
         /// Greater Than Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Released GreaterThan(Date value) {
+        public static Released GreaterThan(Date value) {
             return new Released(value, FilterOperator.GreaterThan);
         }
-
-        ;
 
         /// <summary>
         /// Greater than or Equal To Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Released GreaterOrEqual(Date value) {
+        public static Released GreaterOrEqual(Date value) {
             return new Released(value, FilterOperator.GreaterOrEqual);
         }
-
-        ;
 
         /// <summary>
         /// Less Than Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Released LessThan(Date value) {
+        public static Released LessThan(Date value) {
             return new Released(value, FilterOperator.LessThan);
         }
-
-        ;
 
         /// <summary>
         /// Less Than Or Equal To Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Released LessOrEqual(Date value) {
+        public static Released LessOrEqual(Date value) {
             return new Released(value, FilterOperator.LessOrEqual);
         }
 
-        ;
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
+        }
 
         /// <summary>
         /// Is Filter Valid
@@ -263,7 +241,7 @@ public class VndbFilters {
     /// <summary>
     /// Languages Filter
     /// </summary>
-    public class Languages extends AbstractFilter<String> {
+    public static class Languages extends AbstractFilter<String> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -280,32 +258,28 @@ public class VndbFilters {
             this.CanBeNull = true;
         }
 
-        @Override
-        public String getFilterName() {
-            return this.FilterName;
-        }
-
         /// <summary>
         /// Equality Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Languages Equals(String value) {
+        public static Languages Equals(String value) {
             return new Languages(value, FilterOperator.Equal);
         }
-
-        ;
 
         /// <summary>
         /// Not Equals Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Languages NotEquals(String value) {
+        public static Languages NotEquals(String value) {
             return new Languages(value, FilterOperator.NotEqual);
         }
 
-        ;
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
+        }
 
         /// <summary>
         /// Is Filter Valid
@@ -320,7 +294,7 @@ public class VndbFilters {
     /// <summary>
     /// Original Name Filter
     /// </summary>
-    public class OriginalName extends AbstractFilter<String> {
+    public static class OriginalName extends AbstractFilter<String> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -342,17 +316,12 @@ public class VndbFilters {
             this.CanBeNull = true;
         }
 
-        @Override
-        public String getFilterName() {
-            return this.FilterName;
-        }
-
         /// <summary>
         /// Equality Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public OriginalName Equals(String value) {
+        public static OriginalName Equals(String value) {
             return new OriginalName(value, FilterOperator.Equal);
         }
 
@@ -361,7 +330,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public OriginalName NotEquals(String value) {
+        public static OriginalName NotEquals(String value) {
             return new OriginalName(value, FilterOperator.NotEqual);
         }
 
@@ -370,8 +339,13 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public OriginalName Fuzzy(String value) {
+        public static OriginalName Fuzzy(String value) {
             return new OriginalName(value, FilterOperator.Fuzzy);
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         /// <summary>
@@ -390,7 +364,7 @@ public class VndbFilters {
     /// <summary>
     /// Original Languge Filter
     /// </summary>
-    public class OriginalLanguage extends AbstractFilter<String> {
+    public static class OriginalLanguage extends AbstractFilter<String> {
         /// <summary>
         /// Valid Operators
         /// </summary>
@@ -406,32 +380,28 @@ public class VndbFilters {
             super(value, filterOperator);
         }
 
-        @Override
-        public String getFilterName() {
-            return this.FilterName;
-        }
-
         /// <summary>
         /// Equality Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public OriginalLanguage Equals(String value) {
+        public static OriginalLanguage Equals(String value) {
             return new OriginalLanguage(value, FilterOperator.Equal);
         }
-
-        ;
 
         /// <summary>
         /// Not Equals Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public OriginalLanguage NotEquals(String value) {
+        public static OriginalLanguage NotEquals(String value) {
             return new OriginalLanguage(value, FilterOperator.NotEqual);
         }
 
-        ;
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
+        }
 
         /// <summary>
         /// Is Filter Valid
@@ -446,7 +416,7 @@ public class VndbFilters {
     /// <summary>
     /// Platforms Filter
     /// </summary>
-    public class Platforms extends AbstractFilter<String> {
+    public static class Platforms extends AbstractFilter<String> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -463,17 +433,12 @@ public class VndbFilters {
             this.CanBeNull = true;
         }
 
-        @Override
-        public String getFilterName() {
-            return this.FilterName;
-        }
-
         /// <summary>
         /// Equality Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Platforms Equals(String value) {
+        public static Platforms Equals(String value) {
             return new Platforms(value, FilterOperator.Equal);
         }
 
@@ -482,8 +447,13 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Platforms NotEquals(String value) {
+        public static Platforms NotEquals(String value) {
             return new Platforms(value, FilterOperator.NotEqual);
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         /// <summary>
@@ -499,7 +469,7 @@ public class VndbFilters {
     /// <summary>
     /// Search FIlter
     /// </summary>
-    public class Search extends AbstractFilter<String> {
+    public static class Search extends AbstractFilter<String> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -515,18 +485,18 @@ public class VndbFilters {
             super(value, filterOperator);
         }
 
-        @Override
-        public String getFilterName() {
-            return this.FilterName;
-        }
-
         /// <summary>
         /// Fuzzy Search
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Search Fuzzy(String value) {
+        public static Search Fuzzy(String value) {
             return new Search(value, FilterOperator.Fuzzy);
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         /// <summary>
@@ -542,7 +512,7 @@ public class VndbFilters {
     /// <summary>
     /// Tags Filter
     /// </summary>
-    public class Tags extends AbstractFilter<Integer> {
+    public static class Tags extends AbstractFilter<Integer> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -558,17 +528,12 @@ public class VndbFilters {
             super(value, filterOperator);
         }
 
-        @Override
-        public String getFilterName() {
-            return this.FilterName;
-        }
-
         /// <summary>
         /// Equality Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Tags Equals(Integer value) {
+        public static Tags Equals(Integer value) {
             return new Tags(value, FilterOperator.Equal);
         }
 
@@ -577,8 +542,13 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Tags NotEquals(Integer value) {
+        public static Tags NotEquals(Integer value) {
             return new Tags(value, FilterOperator.NotEqual);
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         /// <summary>
@@ -598,7 +568,7 @@ public class VndbFilters {
     ///		<para>Chars that are linked to childs of the given trait are also included.</para>
     ///		<para>Be warned that this filter ignores spoiler settings, fetch the traits associated with the returned char to verify the spoiler level.</para>
     /// </summary>
-    public class Traits extends AbstractFilter<Integer> {
+    public static class Traits extends AbstractFilter<Integer> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -619,13 +589,8 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Traits Equals(Integer value) {
+        public static Traits Equals(Integer value) {
             return new Traits(value, FilterOperator.Equal);
-        }
-
-        @Override
-        public String getFilterName() {
-            return this.FilterName;
         }
 
         /// <summary>
@@ -633,8 +598,13 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Traits NotEquals(Integer value) {
+        public static Traits NotEquals(Integer value) {
             return new Traits(value, FilterOperator.NotEqual);
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         /// <summary>
@@ -650,7 +620,7 @@ public class VndbFilters {
     /// <summary>
     /// Title Filter
     /// </summary>
-    public class Title extends AbstractFilter<String> {
+    public static class Title extends AbstractFilter<String> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -666,17 +636,12 @@ public class VndbFilters {
             super(value, filterOperator);
         }
 
-        @Override
-        public String getFilterName() {
-            return this.FilterName;
-        }
-
         /// <summary>
         /// Equality Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Title Equals(String value) {
+        public static Title Equals(String value) {
             return new Title(value, FilterOperator.Equal);
         }
 
@@ -685,7 +650,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Title NotEquals(String value) {
+        public static Title NotEquals(String value) {
             return new Title(value, FilterOperator.NotEqual);
         }
 
@@ -694,8 +659,13 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Title Fuzzy(String value) {
+        public static Title Fuzzy(String value) {
             return new Title(value, FilterOperator.Fuzzy);
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         /// <summary>
@@ -711,7 +681,7 @@ public class VndbFilters {
     /// <summary>
     /// Name Filter
     /// </summary>
-    public class Name extends AbstractFilter<String> {
+    public static class Name extends AbstractFilter<String> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -727,17 +697,12 @@ public class VndbFilters {
             super(value, filterOperator);
         }
 
-        @Override
-        public String getFilterName() {
-            return this.FilterName;
-        }
-
         /// <summary>
         /// Equality Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Name Equals(String value) {
+        public static Name Equals(String value) {
             return new Name(value, FilterOperator.Equal);
         }
 
@@ -746,7 +711,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Name NotEquals(String value) {
+        public static Name NotEquals(String value) {
             return new Name(value, FilterOperator.NotEqual);
         }
 
@@ -755,8 +720,13 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Name Fuzzy(String value) {
+        public static Name Fuzzy(String value) {
             return new Name(value, FilterOperator.Fuzzy);
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         /// <summary>
@@ -772,7 +742,7 @@ public class VndbFilters {
     /// <summary>
     /// Username Filter
     /// </summary>
-    public class Username extends AbstractFilter<String> {
+    public static class Username extends AbstractFilter<String> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -788,17 +758,12 @@ public class VndbFilters {
             super(value, filterOperator);
         }
 
-        @Override
-        public String getFilterName() {
-            return this.FilterName;
-        }
-
         /// <summary>
         /// Equality Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Username Equals(String value) {
+        public static Username Equals(String value) {
             return new Username(value, FilterOperator.Equal);
         }
 
@@ -807,7 +772,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Username NotEquals(String value) {
+        public static Username NotEquals(String value) {
             return new Username(value, FilterOperator.NotEqual);
         }
 
@@ -816,8 +781,13 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Username Fuzzy(String value) {
+        public static Username Fuzzy(String value) {
             return new Username(value, FilterOperator.Fuzzy);
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         /// <summary>
@@ -835,7 +805,7 @@ public class VndbFilters {
     /// <summary>
     /// Visual Novel Filter
     /// </summary>
-    public class VisualNovel extends AbstractFilter<Integer> {
+    public static class VisualNovel extends AbstractFilter<Integer> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -852,17 +822,12 @@ public class VndbFilters {
             super(value, filterOperator);
         }
 
-        @Override
-        public String getFilterName() {
-            return this.FilterName;
-        }
-
         /// <summary>
         /// Equality Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public VisualNovel Equals(Integer value) {
+        public static VisualNovel Equals(Integer value) {
             return new VisualNovel(value, FilterOperator.Equal);
         }
 
@@ -871,7 +836,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public VisualNovel NotEquals(Integer value) {
+        public static VisualNovel NotEquals(Integer value) {
             return new VisualNovel(value, FilterOperator.NotEqual);
         }
 
@@ -880,7 +845,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public VisualNovel GreaterThan(Integer value) {
+        public static VisualNovel GreaterThan(Integer value) {
             return new VisualNovel(value, FilterOperator.GreaterThan);
         }
 
@@ -889,7 +854,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public VisualNovel GreaterOrEqual(Integer value) {
+        public static VisualNovel GreaterOrEqual(Integer value) {
             return new VisualNovel(value, FilterOperator.GreaterOrEqual);
         }
 
@@ -898,7 +863,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public VisualNovel LessThan(Integer value) {
+        public static VisualNovel LessThan(Integer value) {
             return new VisualNovel(value, FilterOperator.LessThan);
         }
 
@@ -907,8 +872,13 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public VisualNovel LessOrEqual(Integer value) {
+        public static VisualNovel LessOrEqual(Integer value) {
             return new VisualNovel(value, FilterOperator.LessOrEqual);
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         // This may fail on filters where vn is only =
@@ -927,7 +897,7 @@ public class VndbFilters {
     /// <summary>
     /// Platform Filter
     /// </summary>
-    public class Platform extends AbstractFilter<String> {
+    public static class Platform extends AbstractFilter<String> {
         /// <summary>
         /// Array of Valid Operators
         /// </summary>
@@ -943,17 +913,12 @@ public class VndbFilters {
             super(value, filterOperator);
         }
 
-        @Override
-        public String getFilterName() {
-            return this.FilterName;
-        }
-
         /// <summary>
         /// Equality Filter
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Platform Equals(String value) {
+        public static Platform Equals(String value) {
             return new Platform(value, FilterOperator.Equal);
         }
 
@@ -962,8 +927,13 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Platform NotEquals(String value) {
+        public static Platform NotEquals(String value) {
             return new Platform(value, FilterOperator.NotEqual);
+        }
+
+        @Override
+        public String getFilterName() {
+            return this.FilterName;
         }
 
         /// <summary>

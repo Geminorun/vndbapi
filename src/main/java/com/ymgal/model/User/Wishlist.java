@@ -15,20 +15,20 @@ public class Wishlist {
     /// Visual Novel ID
     /// </summary>
     @JsonProperty("vn")
-    public Integer VisualNovelId;
+    private Integer VisualNovelId;
     /// <summary>
     /// User ID
     /// </summary>
     @JsonProperty("uid")
-    public Integer UserId;
+    private Integer UserId;
     /// <summary>
     /// Wishlist Priority
     /// </summary>
-    public Priority Priority;
+    private Priority Priority;
     /// <summary>
     /// Added on Date
     /// </summary>
     @JsonProperty("added")
-    public LocalDateTime AddedOn;
+    private LocalDateTime AddedOn;
 }
 

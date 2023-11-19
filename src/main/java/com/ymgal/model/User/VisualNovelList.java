@@ -15,24 +15,24 @@ public class VisualNovelList {
     /// Visual Novel ID
     /// </summary>
     @JsonProperty("vn")
-    public Integer VisualNovelId;
+    private Integer VisualNovelId;
     /// <summary>
     /// User ID
     /// </summary>
     @JsonProperty("uid")
-    public Integer UserId;
+    private Integer UserId;
     /// <summary>
     /// Visual Novel Status
     /// </summary>
-    public Status Status;
+    private Status Status;
     /// <summary>
     /// Added on Date
     /// </summary>
     @JsonProperty("added")
-    public LocalDateTime AddedOn;
+    private LocalDateTime AddedOn;
     /// <summary>
     /// Notes
     /// </summary>
-    public String Notes;
+    private String Notes;
 }
 

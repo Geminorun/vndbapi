@@ -10,10 +10,10 @@ public class User {
     /// <summary>
     /// User Id
     /// </summary>
-    public Integer Id;
+    private Integer id;
     /// <summary>
     /// Username
     /// </summary>
-    public String Username;
+    private String username;
 }
 

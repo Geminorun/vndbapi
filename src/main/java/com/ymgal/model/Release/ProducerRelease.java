@@ -1,6 +1,5 @@
 package com.ymgal.model.Release;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ymgal.model.Common.ProducerCommon;
 import lombok.Data;
 
@@ -12,11 +11,10 @@ public class ProducerRelease extends ProducerCommon {
     /// <summary>
     /// Is a developer
     /// </summary>
-    public Boolean IsDeveloper;
+    private Boolean developer;
     /// <summary>
     /// Is a publisher
     /// </summary>
-    @JsonProperty("publisher")
-    public Boolean IsPublisher;
+    private Boolean publisher;
 }
 

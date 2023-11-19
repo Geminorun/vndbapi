@@ -11,10 +11,10 @@ public class CommonLinks {
     /// Name of the related article on the English Wikipedia
     /// </summary>
     @Deprecated
-    public String wikipedia;
+    private String wikipedia;
     /// <summary>
     /// Wikidata identifier
     /// </summary>
-    public String wikidata;
+    private String wikidata;
 }
 

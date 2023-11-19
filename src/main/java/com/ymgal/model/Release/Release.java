@@ -1,9 +1,7 @@
 package com.ymgal.model.Release;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-import java.util.Date;
 import java.util.List;
 
 /// <summary>
@@ -14,93 +12,88 @@ public class Release {
     /// <summary>
     /// Release ID
     /// </summary>
-    public Integer Id;
+    private Integer id;
     /// <summary>
     /// Release Name
     /// </summary>
-    @JsonProperty("title")
-    public String Name;
+    private String title;
     /// <summary>
     /// Release Original Name
     /// </summary>
-    @JsonProperty("original")
-    public String OriginalName;
+    private String original;
     /// <summary>
     /// Date of Release
     /// </summary>
-    public Date Released;
+    private String released;
     /// <summary>
     /// Release Type
     /// </summary>
-    public ReleaseType Type;
+    private String type;
     /// <summary>
     /// Is the Release a patch
     /// </summary>
-    @JsonProperty("patch")
-    public Boolean IsPatch;
+    private Boolean patch;
     /// <summary>
     /// Is the Release freeware
     /// </summary>
-    @JsonProperty("freeware")
-    public Boolean IsFreeware;
+    private Boolean freeware;
     /// <summary>
     /// Is the Release a doujin
     /// </summary>
-    @JsonProperty("doujin")
-    public Boolean IsDoujin;
+    private Boolean doujin;
     /// <summary>
     /// List of languages
     /// </summary>
-    public List<String> Languages;
+    private List<String> languages;
     /// <summary>
     /// Release Website
     /// </summary>
-    public String Website;
+    private String website;
     /// <summary>
     /// Release Notes
     /// </summary>
-    public String Notes; // Possibly rename to description
+    private String notes; // Possibly rename to description
     /// <summary>
     /// Minimum age
     /// </summary>
-    @JsonProperty("minage")
-    public Integer MinimumAge;
+    private Integer minage;
     /// <summary>
     ///		JAN/UPC/EAN code.
     /// </summary>
-    public String Gtin;
+    private String gtin;
     /// <summary>
     /// Catalog Number
     /// </summary>
-    public String Catalog;
+    private String catalog;
     /// <summary>
     /// Resolution of Release
     /// </summary>
-    public String Resolution;
+    private String resolution;
     /// <summary>
     /// Voiced Type
     /// </summary>
-    public Voiced Voiced;
+    private Voiced voiced;
+
+    private Boolean official;
     /// <summary>
     ///		The array has two integer members, the first one indicating the story animations, the second the ero scene animations. Both members can be null if unknown or not applicable.
     /// </summary>
-    public List<Animated> Animation;
+    private List<Animated> animation;
     /// <summary>
     /// Release Platforms
     /// </summary>
-    public List<String> Platforms;
+    private List<String> platforms;
     /// <summary>
     /// Release Media
     /// </summary>
-    public List<Media> Media;
+    private List<Media> media;
     /// <summary>
     /// Related Visual Novels
     /// </summary>
-    @JsonProperty("vn")
-    public List<VisualNovelMetadata> VisualNovels;
+    private List<VisualNovelMetadata> vn;
     /// <summary>
     /// Related Producers
     /// </summary>
-    public List<ProducerRelease> Producers;
+    private List<ProducerRelease> producers;
 }
 

@@ -16,47 +16,47 @@ public class UserList {
     /// User ID
     /// </summary>
     @JsonProperty("uid")
-    public Integer UserId;
+    private Integer UserId;
     /// <summary>
     /// Visual Novel ID
     /// </summary>
     @JsonProperty("vn")
-    public Integer VisualNovelId;
+    private Integer VisualNovelId;
     /// <summary>
     /// Added on date
     /// </summary>
     @JsonProperty("added")
-    public LocalDateTime AddedOn;
+    private LocalDateTime AddedOn;
     /// <summary>
     /// Last modified date
     /// </summary>
     @JsonProperty("lastmod")
-    public LocalDateTime LastModified;
+    private LocalDateTime LastModified;
     /// <summary>
     /// Voted on date
     /// </summary>
     @JsonProperty("voted")
-    public LocalDateTime VotedOn;
+    private LocalDateTime VotedOn;
     /// <summary>
     /// Current vote (between 10 and 100)
     /// </summary>
-    public Integer Vote;
+    private Integer Vote;
     /// <summary>
     /// Notes
     /// </summary>
-    public String Notes;
+    private String Notes;
     /// <summary>
     /// Started playing date
     /// </summary>
-    public Date Started;
+    private Date Started;
     /// <summary>
     /// Finished playing date
     /// </summary>
-    public Date Finished;
+    private Date Finished;
     /// <summary>
     /// Collection of User Labels
     /// </summary>
-    public List<UserLabels> Labels;
+    private List<UserLabels> Labels;
 
 }
 

@@ -12,30 +12,30 @@ public class AnimeMetadata {
     /// <summary>
     /// AniDb ID
     /// </summary>
-    public Integer id;
+    private Integer id;
     /// <summary>
     /// AnimeNewsNetwork ID
     /// </summary>
-    public Integer ann_id;
+    private Integer ann_id;
     /// <summary>
     /// AnimeNfo ID
     /// </summary>
-    public String nfo_id;
+    private String nfo_id;
     /// <summary>
     /// English Title
     /// </summary>
-    public String title_romaji;
+    private String title_romaji;
     /// <summary>
     /// Japanese Title
     /// </summary>
-    public String title_kanji;
+    private String title_kanji;
     /// <summary>
     /// Year anime aired
     /// </summary>
-    public Date year;
+    private Date year;
     /// <summary>
     /// Anime Type
     /// </summary>
-    public String type; // ??
+    private String type; // ??
 }
 

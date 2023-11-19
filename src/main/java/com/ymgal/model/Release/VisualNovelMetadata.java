@@ -1,6 +1,5 @@
 package com.ymgal.model.Release;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /// <summary>
@@ -11,16 +10,15 @@ public class VisualNovelMetadata {
     /// <summary>
     /// Visual Novel ID
     /// </summary>
-    public Integer Id;
+    private Integer id;
     /// <summary>
     /// Visual Novel Name
     /// </summary>
-    @JsonProperty("title")
-    public String Name;
+    private String title;
     /// <summary>
     /// Visaul Novel Original Name
     /// </summary>
-    @JsonProperty("original")
-    public String OriginalName;
+    private String original;
 
+    private String rtype;
 }

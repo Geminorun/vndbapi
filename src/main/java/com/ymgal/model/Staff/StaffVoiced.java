@@ -1,6 +1,5 @@
 package com.ymgal.model.Staff;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /// <summary>
@@ -11,21 +10,18 @@ public class StaffVoiced {
     /// <summary>
     /// Staff Id
     /// </summary>
-    @JsonProperty("id")
-    public Integer StaffId;
+    private Integer id;
     /// <summary>
     /// Alias Id
     /// </summary>
-    @JsonProperty("aid")
-    public Integer AliasId;
+    private Integer aid;
     /// <summary>
     /// Character Id
     /// </summary>
-    @JsonProperty("cid")
-    public Integer CharacterId;
+    private Integer cid;
     /// <summary>
     /// Notes
     /// </summary>
-    public String Note;
+    private String note;
 }
 

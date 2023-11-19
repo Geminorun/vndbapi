@@ -1,6 +1,5 @@
 package com.ymgal.model.Character;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ymgal.model.Common.SpoilerLevel;
 import lombok.Data;
 
@@ -12,19 +11,18 @@ public class CharacterInstances {
     /// <summary>
     /// Character Id
     /// </summary>
-    private Integer Id;
+    private Integer id;
     /// <summary>
     /// Spoiler level
     /// </summary>
-    private SpoilerLevel Spoiler;
+    private SpoilerLevel spoiler;
     /// <summary>
     /// Character's Name
     /// </summary>
-    private String Name;
+    private String name;
     /// <summary>
     /// Character's Original/Japanese Name
     /// </summary>
-    @JsonProperty("original")
-    private String Kanji;
+    private String original;
 }
 

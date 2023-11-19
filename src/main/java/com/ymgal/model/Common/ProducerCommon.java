@@ -1,6 +1,5 @@
 package com.ymgal.model.Common;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /// <summary>
@@ -11,20 +10,18 @@ public class ProducerCommon {
     /// <summary>
     /// Producer ID
     /// </summary>
-    public Integer Id;
+    private Integer id;
     /// <summary>
     /// Producer's Name
     /// </summary>
-    public String Name;
+    private String name;
     /// <summary>
     /// Producer's Original/Official Name
     /// </summary>
-    @JsonProperty("original")
-    public String OriginalName;
+    private String original;
     /// <summary>
     /// Type of the producer
     /// </summary>
-    @JsonProperty("type")
-    public String ProducerType; // Enum? Valid values - https://g.blicky.net/vndb.git/tree/util/sql/all.sql#n20 , real values???
+    private String type; // Enum? Valid values - https://g.blicky.net/vndb.git/tree/util/sql/all.sql#n20 , real values???
 }
 

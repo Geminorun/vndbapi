@@ -10,22 +10,22 @@ public class VisualNovelRelation {
     /// <summary>
     /// Visual Novel Id
     /// </summary>
-    public Integer id;
+    private Integer id;
     /// <summary>
     /// Relation Type
     /// </summary>
-    public String relation;
+    private String relation;
     /// <summary>
     /// Title
     /// </summary>
-    public String title;
+    private String title;
     /// <summary>
     /// Original Title
     /// </summary>
-    public String original;
+    private String original;
     /// <summary>
     /// Is Official relation
     /// </summary>
-    public Boolean official;
+    private Boolean official;
 
 }

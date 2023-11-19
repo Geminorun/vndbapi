@@ -11,18 +11,18 @@ public class StaffLinks extends CommonLinks {
     /// <summary>
     /// Official Homepage
     /// </summary>
-    public String Homepage;
+    private String homepage;
     /// <summary>
     /// Twitter page
     /// </summary>
-    public String Twitter;
+    private String twitter;
     /// <summary>
     /// AniDb page
     /// </summary>
-    public String AniDb;
+    private String anidb;
     /// <summary>
     /// Pixiv page
     /// </summary>
-    public Integer Pixiv;
+    private Integer pixiv;
 }
 

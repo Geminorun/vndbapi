@@ -12,23 +12,23 @@ public class Vote {
     /// <summary>
     /// Version of the Dump
     /// </summary>
-    public VoteDumpVersion Version;
+    private VoteDumpVersion Version;
     /// <summary>
     /// Visual Novel ID
     /// </summary>
-    public Integer VisualNovelId;
+    private Integer VisualNovelId;
     /// <summary>
     /// User ID
     /// </summary>
-    public Integer UserID;
+    private Integer UserID;
     /// <summary>
     /// Vote Value (Between 10 and 100)
     /// </summary>
-    public Byte Value;
+    private Byte Value;
     /// <summary>
     /// Date the vote was added on
     /// </summary>
-    public Date AddedOn;
+    private Date AddedOn;
 
     protected Vote(VoteDumpVersion version, Integer visualNovelId, Integer userId, Byte value, Date addedOn) {
         this.Version = version;

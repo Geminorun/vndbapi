@@ -10,28 +10,28 @@ public class StaffMetadata {
     /// <summary>
     /// Staff ID
     /// </summary>
-    public Integer sid;
+    private Integer sid;
     /// <summary>
     /// Alias ID
     /// </summary>
-    public Integer aid;
+    private Integer aid;
     /// <summary>
     /// English Name
     /// </summary>
-    public String name;
+    private String name;
 
     /// <summary>
     /// Japanese Name
     /// </summary>
-    public String original;
+    private String original;
     /// <summary>
     ///		The role they served as staff
     /// </summary>
-    public String role; // TODO: Convert to enum
+    private String role; // TODO: Convert to enum
     /// <summary>
     ///		Contains more info on their role as staff
     /// </summary>
-    public String note;
+    private String note;
 
     private StaffMetadata() {
     }

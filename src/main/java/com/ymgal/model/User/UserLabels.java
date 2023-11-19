@@ -12,19 +12,19 @@ public class UserLabels {
     /// User ID
     /// </summary>
     @JsonProperty("uid")
-    public Integer UserId;
+    private Integer UserId;
     /// <summary>
     /// Label ID
     /// </summary>
-    public Integer Id;
+    private Integer Id;
     /// <summary>
     /// Label Name
     /// </summary>
-    public String Label;
+    private String Label;
     /// <summary>
     /// Is Label private
     /// </summary>
     @JsonProperty("private")
-    public Boolean IsPrivate;
+    private Boolean IsPrivate;
 }
 

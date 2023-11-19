@@ -10,10 +10,10 @@ public class Media {
     /// <summary>
     /// Medium Type
     /// </summary>
-    public String Medium;
+    private String medium;
     /// <summary>
     /// Quantity of the medium
     /// </summary>
-    public Integer Quantity;
+    private Integer qty;
 }
 

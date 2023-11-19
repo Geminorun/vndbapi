@@ -11,15 +11,15 @@ public class StaffAliases {
     /// <summary>
     /// Staff Id
     /// </summary>
-    public Integer Id;
+    private Integer Id;
     /// <summary>
     /// Staff Name
     /// </summary>
-    public String Name;
+    private String Name;
     /// <summary>
     /// Staff Original Name
     /// </summary>
     @JsonProperty("original")
-    public String OriginalName;
+    private String OriginalName;
 }
 

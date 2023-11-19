@@ -1,5 +1,8 @@
 package com.ymgal;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.ymgal.helper.JsonHelper;
+import com.ymgal.helper.TcpHelper;
 import com.ymgal.model.VndbFlagsConstant;
 
 /**
@@ -49,6 +52,18 @@ public class VndbUtils {
                 break;
         }
         return fullFlags;
+    }
+
+    public static <T> T SendGetRequestInternalAsync(String cmd, TypeReference<T> typeReference) {
+        TcpHelper.sendData(cmd);
+        String response = TcpHelper.getResponse();
+
+        String[] results = response.split(" ", 2);
+
+        if (results.length == 2 &&
+                (results[0].equals(Constants.Results) || results[0].equals(Constants.DbStats)))
+            return JsonHelper.parse(results[1], typeReference);
+        return null;
     }
 
 }

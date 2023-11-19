@@ -11,10 +11,10 @@ public class VisualNovelLinks extends CommonLinks {
     /// <summary>
     /// Encubed Link
     /// </summary>
-    public String encubed;
+    private String encubed;
     /// <summary>
     /// Renai Link
     /// </summary>
-    public String renai;
+    private String renai;
 }
 

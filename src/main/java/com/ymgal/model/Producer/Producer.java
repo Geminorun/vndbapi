@@ -13,22 +13,22 @@ public class Producer extends ProducerCommon {
     /// <summary>
     /// Primary Language
     /// </summary>
-    public String Language;
+    private String language;
     /// <summary>
     /// Producer Links
     /// </summary>
-    public ProducerLinks Links;
+    private ProducerLinks links;
     /// <summary>
     /// List of alternative names
     /// </summary>
-    public List<String> Aliases;
+    private List<String> aliases;
     /// <summary>
     /// Description/notes of the producer, can contain formatting codes
     /// </summary>
-    public String Description;
+    private String description;
     /// <summary>
     /// List of related producers
     /// </summary>
-    public List<Relationship> Relations;
+    private List<Relationship> relations;
 }
 

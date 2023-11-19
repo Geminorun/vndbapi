@@ -11,25 +11,25 @@ public class ScreenshotMetadata {
     /// <summary>
     /// Image URL
     /// </summary>
-    public String image;
+    private String image;
     /// <summary>
     /// Release ID
     /// </summary>
-    public Integer rid;
+    private Integer rid;
     /// <summary>
     /// Is Image NSFW
     /// </summary>
-    public Boolean nsfw;
+    private Boolean nsfw;
     /// <summary>
     /// Violence/Sexual rating of Image
     /// </summary>
-    public ImageRating flagging;
+    private ImageRating flagging;
     /// <summary>
     /// Image height in pixels
     /// </summary>
-    public Integer height;
+    private Integer height;
     /// <summary>
     /// Image width in pixels
     /// </summary>
-    public Integer width;
+    private Integer width;
 }

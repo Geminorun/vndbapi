@@ -77,6 +77,7 @@ public class VisualNovel {
     /// <summary>
     /// List of associated Tags
     /// </summary>
+    //private List<TagMetadata> tags;
     private List<Integer[]> tags;
     /// <summary>
     /// Popularity of the game (between 0 and 100)

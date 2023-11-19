@@ -1,6 +1,5 @@
 package com.ymgal.model.Staff;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /// <summary>
@@ -11,20 +10,18 @@ public class StaffVns {
     /// <summary>
     /// Staff Id
     /// </summary>
-    @JsonProperty("id")
-    public Integer StaffId;
+    private Integer id;
     /// <summary>
     /// Alias Id
     /// </summary>
-    @JsonProperty("aid")
-    public Integer AliasId;
+    private Integer aid;
     /// <summary>
     ///		The role they served as staff
     /// </summary>
-    public String Role; // TODO: Convert to enum
+    private String role; // TODO: Convert to enum
     /// <summary>
     ///		Contains more info on their role as staff
     /// </summary>
-    public String Note;
+    private String note;
 }
 

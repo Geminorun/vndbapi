@@ -1,6 +1,5 @@
 package com.ymgal.model.Character;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /// <summary>
@@ -11,21 +10,18 @@ public class VoiceActorMetadata {
     /// <summary>
     /// Staff Id
     /// </summary>
-    @JsonProperty("id")
-    public Integer StaffId;
+    private Integer id;
     /// <summary>
     /// Staff Alias ID
     /// </summary>
-    @JsonProperty("aid")
-    public Integer AliasId;
+    private Integer aid;
     /// <summary>
     /// Visual Novel ID
     /// </summary>
-    @JsonProperty("vid")
-    public Integer VisualNovelId;
+    private Integer vid;
     /// <summary>
     /// Notes
     /// </summary>
-    public String Note;
+    private String note;
 }
 
