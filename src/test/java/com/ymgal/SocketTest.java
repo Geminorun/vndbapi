@@ -22,8 +22,8 @@ public class SocketTest {
     @Test
     public void tcpTest() {
         TcpHelper.Login();
-        VndbResponse<VisualNovel> visualNovelVndbResponse = VndbGetMethod.GetVisualNovel(VndbFilters.Id.Equals(18).toString());
-        VndbResponse<Release> ReleaseVndbResponse = VndbGetMethod.GetReleaseAsync(VndbFilters.VisualNovel.Equals(18).toString());
+        VndbResponse<VisualNovel> visualNovelVndbResponse = VndbGetMethod.GetVisualNovel(VndbFilters.Id.Equals(17).toString());
+        VndbResponse<Release> ReleaseVndbResponse = VndbGetMethod.GetReleaseAsync(VndbFilters.VisualNovel.Equals(17).toString());
         VndbResponse<Producer> ProducerVndbResponse = VndbGetMethod.GetProducerAsync(VndbFilters.Id.Equals(9).toString());
         VndbResponse<Character> CharacterVndbResponse = VndbGetMethod.GetCharacterAsync(VndbFilters.VisualNovel.Equals(17).toString());
         VndbResponse<Staff> StaffVndbResponse = VndbGetMethod.GetStaffAsync(VndbFilters.Id.Equals(2).toString());

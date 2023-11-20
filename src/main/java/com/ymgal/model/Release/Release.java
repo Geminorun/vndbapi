@@ -72,7 +72,8 @@ public class Release {
     /// <summary>
     /// Voiced Type
     /// </summary>
-    private Voiced voiced;
+    // private Voice voiced;
+    private Integer voiced;
 
     private Boolean official;
     /// <summary>
