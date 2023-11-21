@@ -3,6 +3,7 @@ package com.ymgal.modelhttp.vo;
 import com.ymgal.modelhttp.vo.common.Image;
 import com.ymgal.modelhttp.vo.common.Trait;
 import com.ymgal.modelhttp.vo.common.Vns;
+import lombok.Data;
 
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
  * @Date: 2023/10/16 10:55
  * @Description:
  */
+@Data
 public class Character {
     private String id;
 

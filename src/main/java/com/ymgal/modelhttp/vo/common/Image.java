@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class Image {
-    private Integer id;
+    private String id;
     private String url;
     private Integer[] dims;
     private Integer sexual;

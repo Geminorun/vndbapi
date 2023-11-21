@@ -1,14 +1,16 @@
 package com.ymgal;
 
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.ymgal.helper.HttpClientHelper;
 import com.ymgal.helper.JsonHelper;
 import com.ymgal.helper.PathPostfixHelper;
+import com.ymgal.model.VndbResponse;
 import com.ymgal.modelhttp.PathPostfix;
 import com.ymgal.modelhttp.RequestBody;
 import com.ymgal.modelhttp.VndbFilter;
-import com.ymgal.modelhttp.enums.FilterName;
-import com.ymgal.modelhttp.enums.FilterOperator;
+import com.ymgal.modelhttp.vo.Release;
+import com.ymgal.modelhttp.vo.Vn;
 
 /**
  * @Auther: lyl
@@ -28,10 +30,7 @@ public class VndbGetMethodByHttp {
      * @param filter  过滤器  如：id = 17
      * @return 泛型的java对象
      */
-    public static <T> T getInfoApi(PathPostfix postfix, VndbFilter filter) {
-
-        //根据postfix获取tClass
-        Class<?> tClass = PathPostfixHelper.getVoClass(postfix);
+    public static <T> T getInfoApi(PathPostfix postfix, VndbFilter filter, TypeReference<T> typeReference) {
         //Class<?> tClass = Vn.class;
         //根据postfix获取fields
         String fields = PathPostfixHelper.getFields(postfix);
@@ -48,21 +47,19 @@ public class VndbGetMethodByHttp {
         System.out.println("Url " + url);
         System.out.println("Filter " + filter.toFormatString());
         System.out.println("Field " + fields);
-        System.out.println("CLass " + tClass.getSimpleName());
 
         String jsonstr = HttpClientHelper.sendPost(url, JsonHelper.serialize(body));
-        return JsonHelper.parse(jsonstr, (Class<T>) tClass);
+        return JsonHelper.parse(jsonstr, typeReference);
     }
 
-    public static Object getNovelInfo() {
-        String url = baseurl + "/vn";
+    public static VndbResponse<Vn> GetVisualNovel(VndbFilter vndbFilter) {
+        return VndbGetMethodByHttp.getInfoApi(PathPostfix.VN, vndbFilter, new TypeReference<VndbResponse<Vn>>() {
+        });
+    }
 
-        RequestBody body = new RequestBody();
-        body.setFilters(new VndbFilter(FilterName.ID.getFilterName(), FilterOperator.EQ.getOperator(), "v17").toFormatString());
-        body.setFields("Title,image.url");
-
-        Object obj = HttpClientHelper.sendPost(url, JsonHelper.serialize(body));
-        return obj;
+    public static VndbResponse<Release> getRelease(VndbFilter vndbFilter) {
+        return VndbGetMethodByHttp.getInfoApi(PathPostfix.RELEASE, vndbFilter, new TypeReference<VndbResponse<Release>>() {
+        });
     }
 
 }

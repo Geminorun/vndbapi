@@ -33,31 +33,31 @@ public class VndbGetMethod {
         });
     }
 
-    public static VndbResponse<Release> GetReleaseAsync(String filters) {
+    public static VndbResponse<Release> GetRelease(String filters) {
         String cmd = GetFullMethod(Constants.GetReleaseCommand, filters);
         return VndbUtils.SendGetRequestInternalAsync(cmd, new TypeReference<VndbResponse<Release>>() {
         });
     }
 
-    public static VndbResponse<Producer> GetProducerAsync(String filters) {
+    public static VndbResponse<Producer> GetProducer(String filters) {
         String cmd = GetFullMethod(Constants.GetProducerCommand, filters);
         return VndbUtils.SendGetRequestInternalAsync(cmd, new TypeReference<VndbResponse<Producer>>() {
         });
     }
 
-    public static VndbResponse<Character> GetCharacterAsync(String filters) {
+    public static VndbResponse<Character> GetCharacter(String filters) {
         String cmd = GetFullMethod(Constants.GetCharacterCommand, filters);
         return VndbUtils.SendGetRequestInternalAsync(cmd, new TypeReference<VndbResponse<Character>>() {
         });
     }
 
-    public static VndbResponse<Staff> GetStaffAsync(String filters) {
+    public static VndbResponse<Staff> GetStaff(String filters) {
         String cmd = GetFullMethod(Constants.GetStaffCommand, filters);
         return VndbUtils.SendGetRequestInternalAsync(cmd, new TypeReference<VndbResponse<Staff>>() {
         });
     }
 
-    public static VndbResponse<User> GetUserAsync(String filters) {
+    public static VndbResponse<User> GetUser(String filters) {
         String cmd = GetFullMethod(Constants.GetUserCommand, filters);
         return VndbUtils.SendGetRequestInternalAsync(cmd, new TypeReference<VndbResponse<User>>() {
         });
