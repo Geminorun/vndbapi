@@ -29,14 +29,14 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-public class VndbHarvest {
+public class VndbHarvestMethod {
 
     public static HarvestResult getVndbHarvest(Integer vnid) {
         TcpHelper.Login();
-        GameArchive gameAcrhive = VndbHarvest.getGameAcrhive(vnid);
-        OrgArchive orgArchive = VndbHarvest.getOrgArchive(gameAcrhive.getDeveloper());
-        List<PersonArchive> personArchiveList = VndbHarvest.getPersonArchiveList(gameAcrhive.getStaff().stream().map(x -> x.getSid()).toArray(x -> new Integer[x]));
-        List<CharacterArchive> characterArchiveList = VndbHarvest.getCharacterArchiveList(vnid);
+        GameArchive gameAcrhive = getGameAcrhive(vnid);
+        OrgArchive orgArchive = getOrgArchive(gameAcrhive.getDeveloper());
+        List<PersonArchive> personArchiveList = getPersonArchiveList(gameAcrhive.getStaff().stream().map(x -> x.getSid()).toArray(x -> new Integer[x]));
+        List<CharacterArchive> characterArchiveList = getCharacterArchiveList(vnid);
 
         HarvestResult harvestResult = HarvestResult.ok(
                 gameAcrhive, orgArchive, personArchiveList, characterArchiveList

@@ -10,7 +10,7 @@ public class HarvestTests {
 
     public static void main(String[] args) throws Exception {
         //clannad
-        HarvestResult vndbHarvest = VndbHarvest.getVndbHarvest(17);
+        HarvestResult vndbHarvest = VndbHarvestMethod.getVndbHarvest(17);
 
         //return harvestResult;
 
