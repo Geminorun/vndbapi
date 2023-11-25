@@ -80,7 +80,7 @@ public class TcpHelper {
                     break;
             }
             String data = builder.toString();
-            System.out.println("数据是：" + data);
+            System.out.println("Response：" + data);
             return data;
         } catch (IOException e) {
             throw new RuntimeException(e);

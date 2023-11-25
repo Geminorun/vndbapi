@@ -21,7 +21,7 @@ public class Producer extends ProducerCommon {
     /// <summary>
     /// List of alternative names
     /// </summary>
-    private List<String> aliases;
+    private String aliases;
     /// <summary>
     /// Description/notes of the producer, can contain formatting codes
     /// </summary>

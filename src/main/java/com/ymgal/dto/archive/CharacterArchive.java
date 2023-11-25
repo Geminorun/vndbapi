@@ -1,14 +1,12 @@
 package com.ymgal.dto.archive;
 
 import com.ymgal.dto.ExtensionName;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
 public class CharacterArchive {
 
     private Integer vndbCid;

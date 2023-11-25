@@ -3,14 +3,12 @@ package com.ymgal.dto.archive;
 
 import com.ymgal.dto.ExtensionName;
 import com.ymgal.dto.Website;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
 public class PersonArchive {
 
     private Integer vndbSid;
