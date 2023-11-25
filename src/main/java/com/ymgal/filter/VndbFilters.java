@@ -14,7 +14,7 @@ public class VndbFilters {
     /// <summary>
     /// Filters for Id
     /// </summary>
-    public static class Id extends AbstractFilter<Integer> {
+    public static class Id extends AbstractFilter<Integer[]> {
         /// <summary>
         /// Array of valid operators
         /// </summary>
@@ -27,7 +27,7 @@ public class VndbFilters {
         /// </summary>
         protected String FilterName = "id";
 
-        Id(Integer value, FilterOperator filterOperator) {
+        Id(Integer[] value, FilterOperator filterOperator) {
             super(value, filterOperator);
             super.Value = value;
         }
@@ -37,7 +37,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Id Equals(Integer value) {
+        public static Id Equals(Integer... value) {
             return new Id(value, FilterOperator.Equal);
         }
 
@@ -46,7 +46,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Id NotEquals(Integer value) {
+        public static Id NotEquals(Integer... value) {
             return new Id(value, FilterOperator.NotEqual);
         }
 
@@ -55,7 +55,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Id GreaterThan(Integer value) {
+        public static Id GreaterThan(Integer... value) {
             return new Id(value, FilterOperator.GreaterThan);
         }
 
@@ -64,7 +64,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Id GreaterOrEqual(Integer value) {
+        public static Id GreaterOrEqual(Integer... value) {
             return new Id(value, FilterOperator.GreaterOrEqual);
         }
 
@@ -73,7 +73,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Id LessThan(Integer value) {
+        public static Id LessThan(Integer... value) {
             return new Id(value, FilterOperator.LessThan);
         }
 
@@ -82,7 +82,7 @@ public class VndbFilters {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Id LessOrEqual(Integer value) {
+        public static Id LessOrEqual(Integer... value) {
             return new Id(value, FilterOperator.LessOrEqual);
         }
 

@@ -3,6 +3,8 @@ package com.ymgal.filter;
 import com.ymgal.Interfaces.IFilter;
 import com.ymgal.model.FilterOperator;
 
+import java.util.Arrays;
+
 /**
  * @Auther: lyl
  * @Date: 2023/11/13 15:17
@@ -10,6 +12,10 @@ import com.ymgal.model.FilterOperator;
  */
 public abstract class AbstractFilter<T> implements IFilter {
 
+    /// <summary>
+    /// The name of the Filter
+    /// </summary>
+    private final Class<?> Type;
     /// <summary>
     /// The operators that are allowed for the Filter
     /// </summary>
@@ -31,11 +37,6 @@ public abstract class AbstractFilter<T> implements IFilter {
     /// </summary>
     protected Integer Count;
 
-    /// <summary>
-    /// The name of the Filter
-    /// </summary>
-    private Class<?> Type;
-
     protected AbstractFilter(T value, FilterOperator filterOperator) {
         this.Value = value;
         this.Operator = filterOperator;
@@ -51,6 +52,11 @@ public abstract class AbstractFilter<T> implements IFilter {
 
         if (this.CanBeNull && (this.Value == null))
             return res + "null";
+
+        if (this.Value.getClass().isArray()) {
+            T[] cur = (T[]) this.Value;
+            return res + Arrays.toString(cur);
+        }
 
         return this.Type == String.class
                 ? res + "\"" + this.Value + "\""

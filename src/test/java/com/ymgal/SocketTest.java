@@ -22,12 +22,19 @@ public class SocketTest {
     @Test
     public void tcpTest() {
         TcpHelper.Login();
-        VndbResponse<VisualNovel> visualNovelVndbResponse = VndbGetMethod.GetVisualNovel(VndbFilters.Id.Equals(17).toString());
+        VndbResponse<VisualNovel> visualNovelVndbResponse = VndbGetMethod.GetVisualNovel(VndbFilters.Id.Equals(17, 8).toString());
         VndbResponse<Release> ReleaseVndbResponse = VndbGetMethod.GetRelease(VndbFilters.VisualNovel.Equals(17).toString());
         VndbResponse<Producer> ProducerVndbResponse = VndbGetMethod.GetProducer(VndbFilters.Id.Equals(9).toString());
         VndbResponse<Character> CharacterVndbResponse = VndbGetMethod.GetCharacter(VndbFilters.VisualNovel.Equals(17).toString());
         VndbResponse<Staff> StaffVndbResponse = VndbGetMethod.GetStaff(VndbFilters.Id.Equals(2).toString());
         VndbResponse<User> UserVndbResponse = VndbGetMethod.GetUser(VndbFilters.Id.Equals(2).toString());
         TcpHelper.Loginout();
+    }
+
+
+    @Test
+    public void FilterTest() {
+        String s = VndbFilters.Id.Equals(17, 18).toString();
+        System.out.println(s);
     }
 }
